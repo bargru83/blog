@@ -1,0 +1,18 @@
+{
+  "name": "barry-grubb.com",
+  "version": "1.0.0",
+  "description": "My personal blog",
+  "main": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "author": "Barry Grubb",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "eslint": "^4.17.0",
+    "showdown": "^1.8.6"
+  }
+}

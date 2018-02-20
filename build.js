@@ -1,4 +1,5 @@
 const showdown = require('showdown');
+const moment = require('moment');
 const fs = require('fs');
 
 const converter = new showdown.Converter();
@@ -10,34 +11,34 @@ let indexElements = "";
 function splitFrontMatter(post) {
   const splitPost = post.split('---ENDFRONTMATTER---', 2);
 
-  splitPost[0] = splitPost[0].replace(/\\n/g, "\\n")  
-               .replace(/\\'/g, "\\'")
-               .replace(/\\"/g, '\\"')
-               .replace(/\\&/g, "\\&")
-               .replace(/\\r/g, "\\r")
-               .replace(/\\t/g, "\\t")
-               .replace(/\\b/g, "\\b")
-               .replace(/\\f/g, "\\f");
+  splitPost[0] = splitPost[0].replace(/\\n/g, "\\n")
+    .replace(/\\'/g, "\\'")
+    .replace(/\\"/g, '\\"')
+    .replace(/\\&/g, "\\&")
+    .replace(/\\r/g, "\\r")
+    .replace(/\\t/g, "\\t")
+    .replace(/\\b/g, "\\b")
+    .replace(/\\f/g, "\\f");
 
 
   const frontMatter = JSON.parse(splitPost[0]);
 
-  frontMatter.tags = frontMatter.tags.replace(/\\n/g, "\\n")  
-  .replace(/\\'/g, "\\'")
-  .replace(/\\"/g, '\\"')
-  .replace(/\\&/g, "\\&")
-  .replace(/\\r/g, "\\r")
-  .replace(/\\t/g, "\\t")
-  .replace(/\\b/g, "\\b")
-  .replace(/\\f/g, "\\f")
-  .replace('[', '')
-  .replace(']', '')
-  .replace('\\', '')
-  .replace(/["']/g, "");
+  frontMatter.tags = frontMatter.tags.replace(/\\n/g, "\\n")
+    .replace(/\\'/g, "\\'")
+    .replace(/\\"/g, '\\"')
+    .replace(/\\&/g, "\\&")
+    .replace(/\\r/g, "\\r")
+    .replace(/\\t/g, "\\t")
+    .replace(/\\b/g, "\\b")
+    .replace(/\\f/g, "\\f")
+    .replace('[', '')
+    .replace(']', '')
+    .replace('\\', '')
+    .replace(/["']/g, "");
 
   frontMatter.tags = frontMatter.tags.split(',');
 
-const postContent = splitPost[1];
+  const postContent = splitPost[1];
 
   return { frontMatter, post: postContent };
 }
@@ -52,7 +53,7 @@ if (postFileNames) {
     const readPath = `./posts/${postFileName}`;
     const fileContent = fs.readFileSync(readPath, 'utf8');
 
-    const { frontMatter, post } = splitFrontMatter(fileContent); 
+    const { frontMatter, post } = splitFrontMatter(fileContent);
 
     const { title, date, tags } = frontMatter;
 
@@ -80,12 +81,23 @@ if (postFileNames) {
   });
   const indexTemplatePath = './templates/index.html';
   const indexTemplate = fs.readFileSync(indexTemplatePath, 'utf8');
+  postIndex.sort((a, b) => {
+    const aDate = moment(a.date);
+    const bDate = moment(b.date);
+    if (aDate.isBefore(bDate)) {
+    return -1;
+  }
+  if (aDate.isAfter(bDate)) {
+    return 1;
+  }
+  return 0;
+});
+postIndex.reverse();
+postIndex.forEach((post) => {
+  indexElements += `<a href="${post.writeFileName}.html">${post.title} - ${post.date} - ${post.tags}</a><br />\n`;
+});
 
-  postIndex.forEach((post) => {
-    indexElements += `<a href="${post.writeFileName}.html">${post.title} - ${post.date} - ${post.tags}</a>&nbsp`;
-  });
-
-  const finalIndexPage = indexTemplate.replace('---CONTENT---', indexElements);
-  const indexWritePath = `./docs/index.html`;
-  fs.writeFileSync(indexWritePath, finalIndexPage);
+const finalIndexPage = indexTemplate.replace('---CONTENT---', indexElements);
+const indexWritePath = `./docs/index.html`;
+fs.writeFileSync(indexWritePath, finalIndexPage);
 }

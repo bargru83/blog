@@ -13,6 +13,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "eslint": "^4.17.0",
+    "moment": "^2.20.1",
     "showdown": "^1.8.6"
   }
 }

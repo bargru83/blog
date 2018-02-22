@@ -6,7 +6,7 @@ const converter = new showdown.Converter();
 
 const postIndex = [];
 let indexElements = "";
-
+const postsByTag = {};
 
 function splitFrontMatter(post) {
   const splitPost = post.split('---ENDFRONTMATTER---', 2);
@@ -37,6 +37,10 @@ function splitFrontMatter(post) {
     .replace(/["']/g, "");
 
   frontMatter.tags = frontMatter.tags.split(',');
+
+  frontMatter.tags = frontMatter.tags.map((tag) => {
+    return tag.trim();
+  });
 
   const postContent = splitPost[1];
 
@@ -78,6 +82,13 @@ if (postFileNames) {
 
     postIndex.push({ title, date, tags, writePath, writeFileName });
 
+    tags.forEach((tag) => {
+      if (!postsByTag[tag]) {
+        postsByTag[tag] = [];
+      }
+      postsByTag[tag].push({ title, date, tags, writePath, writeFileName });
+    });
+
   });
   const indexTemplatePath = './templates/index.html';
   const indexTemplate = fs.readFileSync(indexTemplatePath, 'utf8');
@@ -85,19 +96,82 @@ if (postFileNames) {
     const aDate = moment(a.date);
     const bDate = moment(b.date);
     if (aDate.isBefore(bDate)) {
-    return -1;
-  }
-  if (aDate.isAfter(bDate)) {
-    return 1;
-  }
-  return 0;
-});
-postIndex.reverse();
-postIndex.forEach((post) => {
-  indexElements += `<a href="${post.writeFileName}.html">${post.title} - ${post.date} - ${post.tags}</a><br />\n`;
-});
+      return -1;
+    }
+    if (aDate.isAfter(bDate)) {
+      return 1;
+    }
+    return 0;
+  });
+  postIndex.reverse();
 
-const finalIndexPage = indexTemplate.replace('---CONTENT---', indexElements);
-const indexWritePath = `./docs/index.html`;
-fs.writeFileSync(indexWritePath, finalIndexPage);
+  const tagHeaderElements = [];
+  let tagPageTagElements = '';
+  postIndex.forEach((post) => {
+    //indexElements += `<a href="${post.writeFileName}.html">${post.title} - ${post.date} - ${post.tags}</a><br />\n`;
+
+    const divElement =
+      `<div>\
+  <a href="${post.writeFileName}.html">${post.title}</a> \
+  ---TAGS--- \
+  </div>`
+
+    let tagElements = '';
+    post.tags.forEach((tag) => {
+      //tagElements += `<button onclick="goToTags(this.innerText)">${tag}</button>`;
+      tagElements += `<a href="tags/${tag}.html">${tag}</a>`;
+      if (tagHeaderElements.indexOf(tag) === -1) {
+        tagHeaderElements.push(tag);
+      }
+
+    })
+
+
+    /* const tagPageElement =
+      `<div>\
+<a href="${post.writeFileName}.html">${post.title}</a> \
+</div>`
+
+    tagPageTagElements += tagPageElement; */
+
+    const combinedElements = divElement.replace('---TAGS---', tagElements);
+
+    indexElements += combinedElements;
+
+
+
+
+
+  });
+
+  const finalIndexPage = indexTemplate.replace('---CONTENT---', indexElements);
+  const indexWritePath = `./docs/index.html`;
+  fs.writeFileSync(indexWritePath, finalIndexPage);
+
+
+  const tagsTemplatePath = './templates/tags.html';
+  const tagsTemplate = fs.readFileSync(tagsTemplatePath, 'utf8');
+
+  tagHeaderElements.forEach((tag) => {
+
+    let tagLinks = '';
+    const thisTagsPosts = postsByTag[tag];
+    thisTagsPosts.forEach((post) => {
+      const tagLinkElement =
+        `<div> \
+      <a href="../s${post.writeFileName}.html">${post.title}</a> \
+      </div>`
+
+      tagLinks += tagLinkElement;
+    });
+
+    const finalTagPage = tagsTemplate.replace('---CONTENT---', tagLinks);
+    const tagsDirectory = './docs/tags';
+    if (!fs.existsSync(tagsDirectory)) {
+      fs.mkdirSync(tagsDirectory);
+    }
+    const tagsWritePath = `./docs/tags/${tag}.html`;
+    fs.writeFileSync(tagsWritePath, finalTagPage);
+  });
+
 }

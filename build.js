@@ -207,6 +207,7 @@ if (postFileNames) {
   // get file names of any media files
   const mediaFileNames = fs.readdirSync('./media/');
 
+  // if there are any media file, copy them to the docs directory
   if (mediaFileNames) {
     mediaFileNames.forEach((mediaFileName) => {
       const mediaFileReadPath = `./media/${mediaFileName}`;
@@ -215,8 +216,24 @@ if (postFileNames) {
       if (!fs.existsSync(mediaOutputDirectory)) {
         fs.mkdirSync(mediaOutputDirectory);
       }
-
       fs.copyFileSync(mediaFileReadPath, `${mediaOutputDirectory}/${mediaFileName}`);
     });
   }
+
+    // get file names of any static files
+    const staticFileNames = fs.readdirSync('./static/');
+
+    // if there are any media file, copy them to the docs directory
+    if (staticFileNames) {
+      staticFileNames.forEach((staticFileName) => {
+        const staticFileReadPath = `./static/${staticFileName}`;
+  
+        const staticOutputDirectory = './docs';
+        if (!fs.existsSync(staticOutputDirectory)) {
+          fs.mkdirSync(staticOutputDirectory);
+        }
+        fs.copyFileSync(staticFileReadPath, `${staticOutputDirectory}/${staticFileName}`);
+      });
+    }
+
 }

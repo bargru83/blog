@@ -171,20 +171,24 @@ if (postFileNames) {
     // create a var to hold all links of this tag type
     let tagLinks = '';
     // fetch all posts using this tag
-    const thisTagsPosts = postsByTag[tag];
+    const thisTagsPosts = postsByTag[tag].reverse();
     // for each fecthed post
     thisTagsPosts.forEach((post) => {
       // create the html elements for this post's link on the tags pages
       const tagLinkElement =
         `<div> \
-      <a href="../s${post.writeFileName}.html">${post.title}</a> \
+      <a href="../${post.writeFileName}.html" class="post-title">${post.title}</a> \
+      <p class="tag-page-date">${post.date}</p> \
       </div>`
       // add this to the entire list of tag links
       tagLinks += tagLinkElement;
     });
 
-    // insert the list of posts of this tag type in to the tag page template
-    const finalTagPage = tagsTemplate.replace('---CONTENT---', tagLinks);
+    // Create header text for the tag page
+    const tagPageTitle = `Posts by tag: ${cleanTag(tag)}`;
+
+    // insert the list of posts of this tag type, and the page title in to the tag page template
+    const finalTagPage = tagsTemplate.replace('---CONTENT---', tagLinks).replace('---TAG---', tagPageTitle);
 
     // set the tags pages output directory, and create it if it doesn't exist
     const tagsDirectory = './docs/tags';

@@ -1,3 +1,8 @@
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
 .page-container {
   width: 100%;
   max-width: 700px;
@@ -13,7 +18,7 @@
 
 .top-menu-entry {
   font-family: 'Roboto', sans-serif;
-  color: #333333;
+  color: #404040;
   margin-right: 15px;
   font-size: 1em;
   text-decoration: none;
@@ -26,9 +31,27 @@
   border-bottom-color: #0082FF;
 }
 
+.twitter:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color:#2aa3ef;
+}
+
+.github:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: #25292e;
+}
+
+.linkedin:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: #1178b3;
+}
+
 .top-menu-entry-active {
   font-family: 'Roboto', sans-serif;
-  color: #333333;
+  color: #404040;
   margin-right: 15px;
   font-size: 1em;
   text-decoration: none;
@@ -39,32 +62,32 @@
 }
 
 .site-name {
-  color: #333333;
+  color: #404040;
   font-size: 10em;
   font-family: 'Roboto', sans-serif;
   line-height: 0.3em;
   font-weight: 900;
 }
 
-.post-container {
+.index-page-post-container {
   margin-bottom: 30px;
 }
 
-.post-title {
-  color: #333333;
+.index-page-post-title {
+  color: #404040;
   font-size: 1.5em;
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
 }
 
-.post-title:hover {
+.index-page-post-title:hover {
   border-bottom-style: solid;
   border-bottom-width: 4px;
   border-bottom-color: #0082FF;
 }
 
-.post-tag {
+.index-page-post-tag {
   color: #0082FF;
   font-size: 1em;
   font-weight: 900;
@@ -75,44 +98,47 @@
   margin-right: 5px;
 }
 
-.post-tag:hover {
+.index-page-post-tag:hover {
   border-bottom-style: solid;
   border-bottom-width: 4px;
   border-bottom-color: #0082FF;
 }
 
-.post-date {
-  color: #333333;
+.index-page-post-date {
+  color: #828282;
   font-size: 0.8em;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin-top: 5px;
 }
 
 .in-post-title {
-  color: #333333;
+  color: #404040;
   font-size: 3em;
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   margin-top: 60px;
-  margin-bottom: -10px;
+  margin-bottom: 0px;
 }
 
 .in-post-date {
-  color: #333333;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
-  font-weight: 900;
-  margin-bottom: 60px;
+  color: #828282;
+  font-size: 0.8em;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+  margin-top: 5px;
 }
 
 .post-content {
-  color: #333333;
+  color: #828282;
   font-family: 'Lato', sans-serif;
+  margin-top: 60px;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 .post-content h1 {
-  color: #333333;
+  color: #404040;
   font-family: 'Roboto', sans-serif;
   font-size: 2em;
   font-weight: 900;
@@ -137,7 +163,7 @@
 }
 
 .tag-page-title {
-  color: #333333;
+  color: #404040;
   font-size: 3em;
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
@@ -145,21 +171,39 @@
   margin-bottom: 15px;
 }
 
-.tag-page-date {
-  color: #333333;
+.tag-page-post-container {
+  margin-bottom: 30px;
+}
+
+.tag-page-post-title {
+  color: #404040;
+  font-size: 1.5em;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.tag-page-post-title:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: #0082FF;
+}
+
+.tag-page-post-date {
+  color: #828282;
   font-size: 0.8em;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
-  margin-top: 5px;
+  font-family: 'Lato', sans-serif;
+  margin-top: 0px;
 }
 
 .about-page-title {
-  color: #333333;
+  color: #404040;
   font-size: 3em;
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   margin-top: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 60px;
 }
 
 .responsive-img {
@@ -170,7 +214,7 @@
 @media only screen and (max-width: 700px)  {
 
   .site-name {
-    color: #333333;
+    color: #404040;
     font-size: 8em;
     font-family: 'Roboto', sans-serif;
     line-height: 0.5em;

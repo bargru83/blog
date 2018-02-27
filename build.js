@@ -73,7 +73,7 @@ if (postFileNames) {
     const postTemplate = fs.readFileSync(postTemplatePath, 'utf8');
 
     // format the post's date nicely
-    const dateString = moment(post.date).format('Do MMMM Y');
+    const dateString = moment(date).format('Do MMMM Y');
 
     // insert te posts's title, content and date in to the html template for posts
     const combinedContent = postTemplate.replace('---HEADER---', title).replace('---CONTENT---', html).replace('---DATE---', dateString);
@@ -130,10 +130,10 @@ if (postFileNames) {
   postIndex.forEach((post) => {
     // create the html elements for the post's enrtry in the index page
     const divElement =
-      `<div class="post-container">\
-  <a href="${post.writeFileName}.html" class="post-title">${post.title}</a> \
+      `<div class="index-page-post-container">\
+  <a href="${post.writeFileName}.html" class="index-page-post-title">${post.title}</a> \
   ---TAGS--- \
-  <div class="post-date"> \
+  <div class="index-page-post-date"> \
   ---DATE--- \
   </div> \
   </div>`
@@ -141,7 +141,7 @@ if (postFileNames) {
     // create the list of tags to display beside the post entry on the index page
     let tagElements = '';
     post.tags.forEach((tag) => {
-      tagElements += `<a href="tags/${tag}.html" class="post-tag">${cleanTag(tag)}</a>`;
+      tagElements += `<a href="tags/${tag}.html" class="index-page-post-tag">${cleanTag(tag)}</a>`;
       if (tagHeaderElements.indexOf(tag) === -1) {
         tagHeaderElements.push(tag);
       }
@@ -174,11 +174,14 @@ if (postFileNames) {
     const thisTagsPosts = postsByTag[tag].reverse();
     // for each fecthed post
     thisTagsPosts.forEach((post) => {
+      // format the post's date nicely
+      const dateString = moment(post.date).format('Do MMMM Y');
+
       // create the html elements for this post's link on the tags pages
       const tagLinkElement =
-        `<div> \
-      <a href="../${post.writeFileName}.html" class="post-title">${post.title}</a> \
-      <p class="tag-page-date">${post.date}</p> \
+        `<div class="tag-page-post-container"> \
+      <a href="../${post.writeFileName}.html" class="tag-page-post-title">${post.title}</a> \
+      <p class="tag-page-post-date">${dateString}</p> \
       </div>`
       // add this to the entire list of tag links
       tagLinks += tagLinkElement;
@@ -220,20 +223,20 @@ if (postFileNames) {
     });
   }
 
-    // get file names of any static files
-    const staticFileNames = fs.readdirSync('./static/');
+  // get file names of any static files
+  const staticFileNames = fs.readdirSync('./static/');
 
-    // if there are any media file, copy them to the docs directory
-    if (staticFileNames) {
-      staticFileNames.forEach((staticFileName) => {
-        const staticFileReadPath = `./static/${staticFileName}`;
-  
-        const staticOutputDirectory = './docs';
-        if (!fs.existsSync(staticOutputDirectory)) {
-          fs.mkdirSync(staticOutputDirectory);
-        }
-        fs.copyFileSync(staticFileReadPath, `${staticOutputDirectory}/${staticFileName}`);
-      });
-    }
+  // if there are any media file, copy them to the docs directory
+  if (staticFileNames) {
+    staticFileNames.forEach((staticFileName) => {
+      const staticFileReadPath = `./static/${staticFileName}`;
+
+      const staticOutputDirectory = './docs';
+      if (!fs.existsSync(staticOutputDirectory)) {
+        fs.mkdirSync(staticOutputDirectory);
+      }
+      fs.copyFileSync(staticFileReadPath, `${staticOutputDirectory}/${staticFileName}`);
+    });
+  }
 
 }

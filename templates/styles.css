@@ -132,7 +132,7 @@ body {
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   margin-top: 60px;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
 }
 
 .in-post-date {
@@ -140,7 +140,23 @@ body {
   font-size: 0.8em;
   font-weight: 500;
   font-family: 'Lato', sans-serif;
-  margin-top: 5px;
+  margin-top: 20px;
+}
+
+.in-post-tag {
+  color: #0082FF;
+  font-size: 1em;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.in-post-tag:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: #0082FF;
 }
 
 .post-content {

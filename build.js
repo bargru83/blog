@@ -75,8 +75,15 @@ if (postFileNames) {
     // format the post's date nicely
     const dateString = moment(date).format('Do MMMM Y');
 
+    // generate tag elements from tag variable
+    // replace to add tags below
+    let tagElements = '';
+    tags.forEach((tag) => {
+      tagElements += `<a href="tags/${tag}.html" class="in-post-tag">${cleanTag(tag)}</a>`;
+    });
+
     // insert te posts's title, content and date in to the html template for posts
-    const combinedContent = postTemplate.replace('---HEADER---', title).replace('---CONTENT---', html).replace('---DATE---', dateString);
+    const combinedContent = postTemplate.replace('---HEADER---', title).replace('---CONTENT---', html).replace('---DATE---', dateString).replace('---TAGS---', tagElements);
 
     // set the output directory
     const outputDirectory = './docs';

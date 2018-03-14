@@ -23,6 +23,7 @@ body {
   font-size: 1em;
   text-decoration: none;
   font-weight: 500;
+  line-height: 1.5em;
 }
 
 .top-menu-entry:hover {
@@ -54,6 +55,12 @@ body {
   border-bottom-width: 4px;
   border-bottom-color: #e72646;
   border-image: linear-gradient(to right, #864d98, #e72646, #f8b156) 30;
+}
+
+.youtube:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-color: #fc0d1c;
 }
 
 .top-menu-entry-active {

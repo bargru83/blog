@@ -66,8 +66,6 @@ if (postFileNames) {
     const { frontMatter, post, isDraft } = splitFrontMatter(fileContent);
 
     // only continue with this post if it's not a draft
-    console.log(isDraft);
-    console.log(typeof isDraft);
     if (isDraft !== 'true') {
       // get metadata from front matter
       const { title, date, tags } = frontMatter;

@@ -38,7 +38,10 @@ function splitFrontMatter(post) {
 
   // return front matter and tags array separately
   const postContent = splitPost[1];
-  return { frontMatter, post: postContent };
+
+  // is this post a draft?
+  const isDraft = frontMatter.draft;
+  return { frontMatter, post: postContent, isDraft };
 }
 
 // get existing docs directory
@@ -60,54 +63,59 @@ if (postFileNames) {
     const fileContent = fs.readFileSync(readPath, 'utf8');
 
     // separate front matter from post content
-    const { frontMatter, post } = splitFrontMatter(fileContent);
+    const { frontMatter, post, isDraft } = splitFrontMatter(fileContent);
 
-    // get metadata from front matter
-    const { title, date, tags } = frontMatter;
+    // only continue with this post if it's not a draft
+    console.log(isDraft);
+    console.log(typeof isDraft);
+    if (isDraft !== 'true') {
+      // get metadata from front matter
+      const { title, date, tags } = frontMatter;
 
-    // convert post content from md to html
-    const html = converter.makeHtml(post);
+      // convert post content from md to html
+      const html = converter.makeHtml(post);
 
-    // read in html post template
-    const postTemplatePath = './templates/post.html';
-    const postTemplate = fs.readFileSync(postTemplatePath, 'utf8');
+      // read in html post template
+      const postTemplatePath = './templates/post.html';
+      const postTemplate = fs.readFileSync(postTemplatePath, 'utf8');
 
-    // format the post's date nicely
-    const dateString = moment(date).format('Do MMMM Y');
+      // format the post's date nicely
+      const dateString = moment(date).format('Do MMMM Y');
 
-    // generate tag elements from tags variable
-    let tagElements = '';
-    tags.forEach((tag) => {
-      tagElements += `<a href="tags/${tag}.html" class="in-post-tag">${cleanTag(tag)}</a>`;
-    });
+      // generate tag elements from tags variable
+      let tagElements = '';
+      tags.forEach((tag) => {
+        tagElements += `<a href="tags/${tag}.html" class="in-post-tag">${cleanTag(tag)}</a>`;
+      });
 
-    // insert the posts's title, content, date and tags in to the html post template
-    const combinedContent = postTemplate.replace('---HEADER---', title).replace('---CONTENT---', html).replace('---DATE---', dateString).replace('---TAGS---', tagElements);
+      // insert the posts's title, content, date and tags in to the html post template
+      const combinedContent = postTemplate.replace('---HEADER---', title).replace('---CONTENT---', html).replace('---DATE---', dateString).replace('---TAGS---', tagElements);
 
-    // set the output directory
-    const outputDirectory = './docs';
+      // set the output directory
+      const outputDirectory = './docs';
 
-    // if the output directoy doesn't exist, create it
-    if (!fs.existsSync(outputDirectory)) {
-      fs.mkdirSync(outputDirectory);
-    }
-
-    // get the filename to write the html post to
-    writeFileName = postFileName.slice(0, -3);
-    // write the html post file
-    const writePath = `./docs/${writeFileName}.html`;
-    fs.writeFileSync(writePath, combinedContent);
-
-    // push the details of the post to the post index
-    postIndex.push({ title, date, tags, writePath, writeFileName });
-
-    // push the post details to a lookup object
-    tags.forEach((tag) => {
-      if (!postsByTag[tag]) {
-        postsByTag[tag] = [];
+      // if the output directoy doesn't exist, create it
+      if (!fs.existsSync(outputDirectory)) {
+        fs.mkdirSync(outputDirectory);
       }
-      postsByTag[tag].push({ title, date, tags, writePath, writeFileName });
-    });
+
+      // get the filename to write the html post to
+      writeFileName = postFileName.slice(0, -3);
+      // write the html post file
+      const writePath = `./docs/${writeFileName}.html`;
+      fs.writeFileSync(writePath, combinedContent);
+
+      // push the details of the post to the post index
+      postIndex.push({ title, date, tags, writePath, writeFileName });
+
+      // push the post details to a lookup object
+      tags.forEach((tag) => {
+        if (!postsByTag[tag]) {
+          postsByTag[tag] = [];
+        }
+        postsByTag[tag].push({ title, date, tags, writePath, writeFileName });
+      });
+    }
   });
 
   // read in html index page template

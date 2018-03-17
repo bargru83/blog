@@ -41,10 +41,10 @@ function splitFrontMatter(post) {
   return { frontMatter, post: postContent };
 }
 
-// get all file names of existing (potentially stale) files in docs directory
+// get existing docs directory
 const docsDir = './docs/';
-//const existingDocs = fs.readdirSync(docsDir);
-// delete all files
+
+// delete existing docs directory
 if (fs.existsSync(docsDir)) {
   deleteFolderRecursive('./docs/');
 }
@@ -55,7 +55,7 @@ const postFileNames = fs.readdirSync('./posts/');
 // if there are any md posts
 if (postFileNames) {
   postFileNames.forEach((postFileName) => {
-    // read in all md posts
+    // read in md post
     const readPath = `./posts/${postFileName}`;
     const fileContent = fs.readFileSync(readPath, 'utf8');
 
@@ -68,21 +68,20 @@ if (postFileNames) {
     // convert post content from md to html
     const html = converter.makeHtml(post);
 
-    // read in html template file for posts
+    // read in html post template
     const postTemplatePath = './templates/post.html';
     const postTemplate = fs.readFileSync(postTemplatePath, 'utf8');
 
     // format the post's date nicely
     const dateString = moment(date).format('Do MMMM Y');
 
-    // generate tag elements from tag variable
-    // replace to add tags below
+    // generate tag elements from tags variable
     let tagElements = '';
     tags.forEach((tag) => {
       tagElements += `<a href="tags/${tag}.html" class="in-post-tag">${cleanTag(tag)}</a>`;
     });
 
-    // insert te posts's title, content and date in to the html template for posts
+    // insert the posts's title, content, date and tags in to the html post template
     const combinedContent = postTemplate.replace('---HEADER---', title).replace('---CONTENT---', html).replace('---DATE---', dateString).replace('---TAGS---', tagElements);
 
     // set the output directory
@@ -111,7 +110,7 @@ if (postFileNames) {
     });
   });
 
-  // read in html template file for the index page
+  // read in html index page template
   const indexTemplatePath = './templates/index.html';
   const indexTemplate = fs.readFileSync(indexTemplatePath, 'utf8');
 
@@ -157,7 +156,7 @@ if (postFileNames) {
     // format the post's date nicely
     const dateString = moment(post.date).format('Do MMMM Y');
 
-    // insert the tag list and the date in to the post enty's html elements
+    // insert the tag list and the date in to the post entry's html
     const combinedElements = divElement.replace('---TAGS---', tagElements).replace('---DATE---', dateString);
 
     // add this post entry to the list of all post entries
@@ -169,7 +168,7 @@ if (postFileNames) {
   const indexWritePath = `./docs/index.html`;
   fs.writeFileSync(indexWritePath, finalIndexPage);
 
-  // read in html template file for the tags pages
+  // read in html tags pages template file
   const tagsTemplatePath = './templates/tags.html';
   const tagsTemplate = fs.readFileSync(tagsTemplatePath, 'utf8');
 
@@ -233,7 +232,7 @@ if (postFileNames) {
   // get file names of any static files
   const staticFileNames = fs.readdirSync('./static/');
 
-  // if there are any media file, copy them to the docs directory
+  // if there are any static files, copy them to the docs directory
   if (staticFileNames) {
     staticFileNames.forEach((staticFileName) => {
       const staticFileReadPath = `./static/${staticFileName}`;
@@ -245,5 +244,4 @@ if (postFileNames) {
       fs.copyFileSync(staticFileReadPath, `${staticOutputDirectory}/${staticFileName}`);
     });
   }
-
 }

@@ -1,0 +1,168 @@
+{
+  "title": "How css color works",
+  "date": "2018-06-28",
+  "tags": "['web development']",
+  "draft": "false"
+}
+---ENDFRONTMATTER---
+
+Hands up those among us who have used color in web development without really understanding what we're doing? My hand is firmly in the air, so I figured I'd take a dive into web colors to see what I could find out. This is the sort of topic that I could go into a very deep dive on and still not reach the bottom, so what follows is a whistle-stop tour of the most important parts.
+
+# RGB color space
+
+A color space defines the total range of possible colors that a system can produce. This range of colors is commonly referred to as a 'gamut'. In the vast majority of consumer electronic equipment available today we use the RGB color space, which is standardised so that we can be sure that a photo taken on any given digital camera for example will display correctly on any given screen, without having to know which color space the photo was taken in and convert it for display on that particular screen first. In fact that's an oversimplification, the RGB color space is actually comprised of multiple potential color spaces, but more on that in a bit.
+
+The RGB color space specifies that a color is determined by setting three values, for Red, Green and Blue respectively. These three initial colors are called 'additive primaries', which means that all possible colors can be derived just by adding these three colors together in various combinations. Consider a scenario in which we have three torches (and presumably three hands to hold them at the same time), a red torch, a blue torch and a green torch. If we shine just the red torch at a plain white wall in a dark room, we'll see a red spot. If we now also shine the green torch at that same point, the colors will blend additively and we'll now see a yellow spot.
+
+<div class="aside">
+<h2>Additive versus subtractive color</h1>
+
+Note that when we blend colors additively in this way we follow different rules from those we learned at pre-school when we were taught how to mix paints for example, in which case red and green would have mixed to form a nasty brown color. The reason for this difference is that when mixing paints we use what is know as a subtractive color model. This means that an initial light source will bounce from the paint's surface, and then the light will continue its journey to our retina where we can begin to perceive the color. With the subtractive color model, each color (paint in this instance) that the light comes into contact with on its journey to our retina will physically absorb particular wavelengths of that light, only returning those wavelengths that it can't absorb. It is the absorption/subtraction of particular wavelengths of light that give the paint its color, and this is why we call it the subtractive color model.
+
+Conversely the additive color model used in the RGB color space works by starting with no light at all and adding colors until the desired result is achieved. This additive color model is exactly how computer screens work. This means that on a physical level a surface that appears (for example) yellow in the additive color model, and a surface that appears yellow in the subtractive color model are actually quite different, even though the effect that they have on our retinas is similar.
+</div>
+
+If all three torches are shone on the same point that spot will turn white, and if all three torches are switched off the spot will go black. In other words white is created by adding as much color as we possibly can, whereas black is the total absence of any color.
+
+Adding the three additive primaries in this way, by switching each torch either fully on or off,  we can achieve a maximum of 8 unique colors (including white and black), as shown below:
+
+* Red
+* Green
+* Blue
+* Red + Green = Yellow
+* Red + Blue = Magenta
+* Green + Blue = Cyan
+* All torches on = white
+* All torches off = black
+
+That's great, but what if I told you that the RGB color space is capable of rendering 16,777,216 unique colors? How can we possibly create that many different colors just by switching off and on three initial colors? The trick is that each of our three torches actually has a dimmer on it, and that dimmer allows for the torch to shine at any one of 256 varying levels of intensity. With the ability to blend each of the three colors at one of 256 levels of intensity each we can now achieve our full color gamut (256 x 256 x 256 = 16,777,216 colors).
+
+# Computer screens
+
+Okay that makes sense for torches, but how does this translate to a computer screen? It's actually very simple, and not too dissimilar to our torch example. When most of us think of a digital screen we consider that it is made up of a grid of pixels, and each pixel can be set to any given color. When viewed from afar these pixels appear to resemble a whole image. However what isn't as well know is that the pixel isn't the smallest comprising element in this image. Each pixel is actually made up of three smaller areas still, separate divisions for, you guessed it, red, green and blue. These divisions are called subpixels. To turn a particular pixel a given color these three subpixels are each set to a specific level of intensity from the 256 that it has at its disposal. Unlike in our torch example however these three divisions are usually located directly beside one another rather than occupying the same space. However they're so small that when viewed from a standard viewing distance we see only the additive blend of those three divisions, giving the pixel its color.
+
+
+<div class="aside">
+<h2>Color channels</h1>
+
+Strictly speaking when we consider a digital image it can be said to be comprised of three separate 'channels'. What this means is that the final image is considered to be made up of 3 individual images layered atop one another. One image is made up of only 256 intensities of red (called the red channel), one is made up of only 256 intensities of green (the green channel) and another is made up of only 256 intensities of blue (the blue channel). It is the blending of these three separate channel images together that instructs the system as to which intensities of red green and blue a subpixel should show. This distinction isn't directly useful to you unless you deal with color correction via specialist software such as Adobe Photoshop, but it's useful to know because the term 'channel' is often used to refer to the seperate red, green and blue values that make up a color.
+
+</div>
+
+# Color spaces within RGB
+
+So the RGB color space specifies how 3 initial colors, each with 256 different levels of intensity should be added together to create 16,777,216 unique colors. However several variants of the RGB color space can actually exist. How is this possible? Consider our torch example again. As we know the total range of colors that we can create with it is known as its gamut. Now consider that we replace the bulb in the red torch for example with one from a different manufacturer. It's still a red bulb, but now it's slightly more orange than our original red bulb. We can still create the same number of total colors as before, the size of our gamut hasn't altered, but the gamut itself has shifted. Every color will now appear slightly differently to how it would have with our original red torch.
+
+Therefore to ensure that colors are reproduced accurately across devices, a full RGB specification needs to specify which variants of red, green and blue it uses. These are specified in internationally recognised values that are used across industries to ensure that a given type of light is a consistent color everywhere it is used. In addition an RGB specification needs to specify its white point, which instructs what pure white should look like (it doesn't need to specify a black point, because as we know black is simply the lack of any color). By far the most popular color space in use across the world today is the sRGB (standard RGB) color space, which is used in almost all consumer electronic equipment, and generally speaking most often when the term RGB is used, it's actually sRGB that is meant. Additional RGB color spaces are generally created for very specific purposes such as high-end photography, however these can only be displayed on specialist equipment that has been purpose built to be able to display that particular color space, so is out of reach to the vast majority of users. As such, and as you might have guessed, sRGB is the color space that is used by css, because it's the color space of the consumer computer system.
+
+# Let's look at css
+
+So now we understand that css considers color in an sRGB color space. Now let's take a look at the various methods we can use to set colors through css, and try to decipher these methods so that their syntax is a bit more readable to us.
+
+Currently (at the time of general CSS3 browser adoption) we have four possible ways of specifying color through css: RGB values, keywords, hexadecimal notation and HSL values. Each of these uses its own syntax, but behind the scenes they all boil down to the same thing, a triplet of values from a range of 256, one each for the red, blue and green channels.
+
+## RGB values
+
+RGB values are a good example to start with, because we can easily see how they map to the underlying RGB values that the system uses, because literally speaking for the most part they are the same thing. To set a color in css using RGB values we use the following syntax:
+
+```
+p { color: rgb(255, 0, 0) } /* red (full intensity of red) */
+```
+
+The three arguments passed to the rgb function are, as you have probably guessed, the values for the red, green and blue 'channels'. In this instance the parameters are an integer range from 0 to 255, representing the 256 potential values for each channel. In the example above we can see that there's a value of 255 (full intensity) for red, and 0 (no intensity) for green and blue. This will produce a pure red pixel.
+
+As we know from our torch example to produce yellow additively we need to add red and green together, so this is how we would specify pure yellow:
+
+```
+p { color: rgb(255, 255, 0) } /* yellow (full intensities for red and green, none for blue) */
+```
+
+Of course this example considers colors at their fullest intensities. A huge range of different yellows could be achieved by combining all three channels in different ways. Here are some additional examples:
+
+```
+p { color: rgb(255, 0, 255) } /* magenta (full intensities of red and blue)*/
+p { color: rgb(0, 255, 255) } /* cyan (full intensities of green and blue)*/
+p { color: rgb(255, 255, 255) } /* white (all channels at full intensity) */
+p { color: rgb(0, 0, 0) } /* black (all channels at 0 intensity) */
+```
+
+Css also offers us an additional syntax for inputting RGB values, which may help some to easier visualise the resulting color from its parameters:
+
+```
+p { color: rgb(100%, 0%, 0%) } /* red */
+```
+
+Rather than an integer range of 0-255 this syntax uses a float range of 0.0% to 100.0 %, to allow us to specify how intense each channel should appear on a percentage basis, rather than specifying its integer equivalent. Behind the scenes of course the translation is done for us, so a value of 0% converts to an integer of 0, whereas a value of 100% converts to an integer of 255.
+
+Additionally we have the ability to add an alpha channel to our RGB values. This might seem to complicate things somewhat, after all we know that an image is comprised of only three channels, however it's really not that bad, and is purely a syntactical change. An alpha channel is our way of telling the system to render the given RGB value at a particular level of transparency. To display pure red at 50% transparency we would specify as follows:
+
+```
+p { color: rgba(255, 0, 0, 0.5) } /* 50% transparent red */
+```
+The fourth argument is a float range from 0.0 to 1.0, and directly controls the opacity of the color. An opacity of 0 will render the color fully transparent, while an opacity of 1 will render it fully opaque. In this example the opacity is set to 50%. However the resulting color will still simply be a three channel RGB color, just like a regular RGB value. When opacity is used however the system needs to do some additional calculations for us. The three channel RGB color will first be calculated on its own, then the system will consider any other color that exists at that same pixel space on screen, and then perform the required calculations to blend the two colors together, using each colors' opacity value (as well as the HTML element's z-index) to know which levels of each of those two RGB colors to add together. The resulting color makes it appear that the red color is shown at 50% opacity above another color, but in reality what is produced is a new RGB color that simply produces that illusion.
+
+## Keywords
+
+Keywords are a set of standardised color names that all compliant browsers will understand. Each browser knows specifically which RGB values should represent any given name, so when a keyword color is specified in css, the browser will replace that keyword for us with the RGB value that it represents.
+
+```
+p { color: red } /* rgb(255, 0, 0) */
+p { color: purple } /* rgb(128, 0, 128) */
+p { color: maroon } /* rgb(128, 0, 0) */
+```
+
+While it's convenient and certainly more human readable to use keywords rather than RGB values, they are quite limiting. Of course it would be totally impractical to assign keyword names to each of the 16,777,216 available colors, and the selection of colors that do have keyword names is actually relatively small. While it might be useful to use 'black' or 'white' instead of their RGB value equivalents, adhering only to keyword colors would mean forgoing the huge number of available colors in favour of only those with specific keyword names.
+
+## Hexadecimal notation
+
+Hexadecimal notation is perhaps the least human readable form of css color specification, at least until you understand how it works. A big reason for this is the fact that it counts numbers in a different way to how we generally learn to count as humans. When learning to count we use what is known as the decimal system, in other words a 'base ten' system. This means that we count in 'tens', from 0-9, and when the maximum is exceeded and we need a larger number we add an additional column to the left, one which will have a value ten times greater than the preceding column. In other words we begin with a 'ones' column, followed by a 'tens' column which is ten times greater than the 'ones' column', then a 'hundreds' column, which in turn is ten times greater than the 'tens' column, and so on.
+
+The word hexadecimal literally means 16, because hexa means 6 and decimal as we've already seen means 10. So in the hexadecimal system we count in 'sixteens'. The first column counts from 0-15, then we add an additional column to its left, which is sixteen times greater than the preceding column, and so on. Because the hexadecimal system requires us to count in 'sixteens', we run out of symbols to display our numbers when using only our decimal digits of 0-9. Therefore the hexadecimal system uses the digits 0-9 to represent the numbers 0 to 9, and then the remaining numbers 10 - 15 are represented by the alphabetical characters A - F. Therefore to count sixteen numbers in hexadecimal we proceed as follows: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+
+Now that we understand what all of the symbols mean, let's take a look at how we use hexadecimal notation to represent a color in css:
+
+```
+p { color: #FF0000 } /* red */
+```
+
+The first thing to note is that the color must begin with a pound/hash/hashtag/whatever-you-want-to-call-it symbol. This tells the system that the proceeding symbols are a hexadecimal color. What follows next is six characters, although as we'll see in a moment this can be only three characters in some instances. For now let's look at the six character example, which is the most commonly used format. The six characters can be grouped into pairs, so that we have three pairs of two characters. This should begin to sound a little familiar now, because the three pairs will represent the three color channels of red, green and blue. Essentially we're representing the same three RGB color channels as we are with RGB values, but instead of using the integer range of 0-255 to do so, we're using two characters with a hexadecimal range of 0-F for each channel.
+
+So how can two characters of 0-F represent the 256 values that we need to represent the full range of intensities for each channel? That's actually pretty easy to understand. Each character can represent one of 16 values (0-F), so with both characters of a pair multiplied together we can represent 16 x 16 = 256 different values. That's convenient!
+
+Okay so we understand that hexadecimal notation can represent colors in three channels, each of which can have a selected value from a range of 256 potential values, and that this is exactly the same as how RGB values work. However it can still be difficult to determine just from looking at a value in hexadecimal notation what that resulting color might look like. Let's dig in a little further to understand this better. In the example above, the red channel (the first pair) has a value of FF. We know that F is equivalent to 15, so how do two values of 15 equate to an RGB value of 255? Let's take a look at the simple maths behind this calculation.
+
+Let's go back to our familiar decimal system for a bit, and consider the number 15. We instinctively know that the characters 1 and 5 placed together (without any other numbers around them) means 15, but why is this? Well it goes back to those columns again. The 5 digit is in the 'ones' column, so to determine its true value we simply multiply it by 1. 5 x 1 = 5. Now on the to 1 digit. This sits in the 'tens' column, so to determine its true value we multiply it by 10. 1 x 10 = 10. Therefore the 5 digit equals 5, the 1 digit actually represents 10, so the sum of those two values equals 15.
+
+Now back to the hexadecimal system. In our example the red channel has a value of FF. We know that F represents 15, so we essentially have two 15s to deal with. The rightmost 15 sits in the 'ones' column, so just like in the decimal system we derive its true value by multiplying it by 1. 15 x 1 = 15. Now onto the leftmost 15. Because this is a hexadecimal system it sits in the 'sixteens' column, so to derive its true value we need to multiply it by 16. 15 x 16 = 240. We now have the values 240 and 15, the sum of which is 255. That's how FF equates to an RGB value of 255.
+
+To make sure we understand hexadecimal notation let's look at a few more examples:
+
+```
+p { color: #FFFF00 } /* yellow (full intensities of red and green, none for blue) */
+p { color: #FFFFFF } /* white (all channels at full intensity) */
+p { color: #000000 } /* black (all channels at 0 intensity) */
+```
+
+So what about those examples of hexadecimal notation that use 3 digits rather than 6 that I mentioned earlier? That's just a shorthand method for convenience, however it can only be used in very specific situations. In fact it can only be used when each of the three channel pairs features an identical pair of characters. For instance a hexadecimal color of #FF0011 could be written as #F01, and the system would understand that it needs to expand this out to #FF0011 behind the scenes by duplicating each character within the pair. However a hexadecimal color of #FF0010 could not be written in this shorthand syntax, because the third channel doesn't feature an identical pair.
+
+## HSL values
+
+The final color format that we're going to look at is HSL, or Hue, Saturation and Lightness values. When working with graphics editing software I've always preferred to use HSL values to select my colors, because in my opinion it's the easiest to grasp as a human, due to the fact that it closely mimics how we consider color in our day to day lives. Let's take a look at an example of an HSL value in css:
+
+```
+p { color: hsl(0, 100, 50) } /* red */
+```
+
+Have you ever seen a color wheel before? I'm assuming you have, it's an often used circular diagram that features within it all of the available hues of a color range, with complementary colors appearing directly opposite one another.  Well the first value in our hsl function corresponds directly with that color wheel. It's an integer range from 0-360, and directly maps to a degree position around that color wheel. It's used to select our hue, in other words the base color that we'll begin with. The second value is an integer range from 0-100, and this controls the saturation of that hue, in other words how intense the color is. A saturation of 100 is the most intense version of that hue, whereas a saturation of 0 will cause the hue to become completely desaturated, or grey scale. The third value, which is also an integer range from 0-100 controls the lightness of the color. A lightness of 100 will always cause the color to become pure white, while a lightness of 0 will cause the value to become pure black. A lightness of 50 will result in a pure version of that color, not lightened or darkened. The example given above is actually equal to an rgb value of 255, 0, 0, because the hue value of 0 will put us at the 0th-degree position on the color wheel, which happens to be red. The saturation value of 100 will give us the full intensity of that red, and the lightness value of 50 will give us a pure version of that red that isn't lightened or darkened.
+
+We have one other option when dealing with HSL values, and that is to add an alpha channel, just as we could with RGB values. This looks like:
+
+```
+p { color: hsla(0, 100, 50, 0.5) } /* 50% transparent red */
+```
+
+The fourth parameter is a float range from 0.0 to 1.0, and controls the opacity. An opacity of 0 will produce a color that is fully transparent while an opacity of 1 will produce a fully opaque color. Of course as with rgba colors the resulting color will still be calculated as an RGB value behind the scenes.
+
+# Conclusion
+
+The most important thing to take away from this post is the fact that most computer systems, and as a result css was designed and built to work with sRGB colors. The four described methods of specifying css colors are simply ways of offering us different syntaxes to work with. Behind the scenes the colors we specify are simply converted to RGB values for us.

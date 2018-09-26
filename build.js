@@ -8,7 +8,7 @@ const {
   deleteFolderRecursive
 } = require('./lib/utils');
 
-const converter = new showdown.Converter();
+const converter = new showdown.Converter({strikethrough: true});
 
 // set global vars
 const postIndex = [];

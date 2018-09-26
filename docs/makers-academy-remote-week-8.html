@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Baz Grubb</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="top-menu">
+      <a href="./index.html" class="top-menu-entry-active">Blog</a>
+      <a href="./about.html" class="top-menu-entry">About</a>
+      <!-- <a href="./cv.html" class="top-menu-entry">CV/Resume</a> -->
+    </div>
+    <h1 class="in-post-title">Makers academy remote - week 8</h1>
+    <a href="tags/web development.html" class="in-post-tag">web development</a><a href="tags/makers academy.html" class="in-post-tag">makers academy</a>
+    <p class="in-post-date">19th March 2016</p>
+    <div class="post-content"><p><img src="media/makers-academy-remote-week-8-header.png" alt="Makers Academy remote week 8" title="Makers Academy remote week 8" /></p>
+<p>Since the beginning of the course we’ve been taught several staples of modern web development, including the use of a clearly separated back end and front end, and the use of an MVC (Model View Controller) structure has been a large part of that. This week however we’ve been introduced to AngularJS, and while I wouldn’t say that it disregards those staples, it certainly behaves in ways that test our assumptions.</p>
+<h1 id="mvc">MVC</h1>
+<p>I’ve used the phrase MVC above without explanation, so here we go. Following a Model View Controller pattern, as does Rails that we learned last week, the structure of the web app can be largely split across the three categories. The Model manages the data and logic of the web app. The View refers to a representation of information, usually the visible part of the site. The Controller deals with input, assesses it and passes it to either the Model or the View. That’s a hugely simplified description.</p>
+<p>AngularJS is a framework which unusually places a lot of what is traditionally considered back end logic on to the front end, causing us to reconsider what we’d previously believed to be fairly rigid constraints on what each end of the stack should do. Angular (I’m hereby dropping the JS because: hassle) does address the concepts of Views and Controllers, only that it approaches them differently from how a traditional MVC environment would. Angular has proven difficult to categorise alongside traditional MVC frameworks, so is generally considered a MVW (Model View Whatever) framework. In other words, call it what you want.</p>
+<h1 id="angular">Angular</h1>
+<p>The concept behind Angular’s initial development was to redesign ‘HTML the way it should be’. When working with Angular, logic is placed inside Angular controllers, or extracted into separate entities called factories, services and providers, which largely all do the same thing with slight differences. The logic is then implemented by attaching what Angular calls directives to specific HTML elements within the views, creating what is known as 2-way data binding. 2-way data binding means that any changes to the controller are immediately reflected within the view without the need to refresh the page, and likewise updates within the views are immediately propagated to the controllers.</p>
+<h1 id="githubprofileviewer">GitHub profile viewer</h1>
+<p>Our week with Angular felt like a very brief crash course. We were allocated only Monday and Tuesday to learn the basics by following an official Google tutorial while keeping particular questions posed by Makers Academy in mind. From Wednesday onwards we were then split into groups to work on a small scale Angular project. The project task was to build a GitHub profile viewer, an application that acts as a search engine of GitHub users by polling the GitHub API for data. In my opinion this project was perfectly sized for the given amount of time. As a group we did manage to implement most of the intended features, although we ran out of time to apply the finishing touches we’d have liked, perhaps another day or two would have afforded us the opportunity to get the project to a point we would consider complete.</p>
+<p>Angular makes it relatively easy to get an application up and running quickly, and it didn’t take long to have our local dummy data (as opposed to data actually pulled from GitHub) displayed within our views. Surprisingly working with the GitHub API to fetch the real data was actually the most difficult challenge for our group. Ideally we’d have liked to request from the GitHub API the data for all members of a given GitHub organisation (the Makers Academy organisation in our example) and be returned the entire list in JSON format. However this isn’t quite so simple due to a combination of factors. For one thing, when polling the API we were initially acting as an unauthorised user, which confusingly only returned the data for a small handful of members, only 24 of the total 647 members at the time were returned to us to be exact. After some investigation we discovered that the 24 members which we were receiving were those 24 who had at some point in time opted to change their Makers Academy organisation status from the default ‘private’ setting to ‘public’. I suspect they probably all did so simply for the same challenge that we were currently facing.</p>
+<p>The solution to this particular issue was to poll the GitHub API while logged in as a member of the same organisation which we were requesting data for, which would remove the private members limitation. However using a particular member’s credentials was not a simple solution because we clearly wanted to avoid pushing anybody’s credentials to the GitHub repository for security reasons. This issue led us in search of methods to extract the credentials from environment variables, something which is trivial when working in Ruby, but which in the short amount of time allocated we didn’t solve in a satisfactory manner with JavaScript. We did however use the credentials for local testing purposes, and this led us to another issue. We were surprised to learn that even with authorised credentials our request still only returned the data for 30 members. It transpired that the way in which we were polling the API could only return a maximum of 30 results at a time, because it was designed with pagination in mind. We discovered an alternative method of polling the API, but even this would only return a maximum of 100 results at a time. We had no more time to devote to this issue, so our app could only ever display a maximum of 100 users. Of course we’d np doubt find a solution given more time.</p>
+<p>This week we were given no weekend challenge, but were instead afforded the extra time to work on our week’s project. For this week’s relatively small scale project this enabled us to begin working on the front end visual design, something which is generally overlooked on the Makers Academy course, but which I’m always keen to work with. However the primary focus for this week was Angular, and I believe that this project provided us with a solid introduction. I leave this week appreciating the concept of Angular, but with many questions regarding the ways in which it differs to the technologies we’ve previously used. As with pretty much everything that this course introduces us to, a lot of self study is required before I could begin to feel comfortable with it.</p></div>
+  </div>
+</body>
+
+</html>

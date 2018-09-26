@@ -5,7 +5,6 @@
   "draft": "false"
 }
 ---ENDFRONTMATTER---
-
 Hands up those among us who have used color in web development without really understanding what we're doing? My hand is firmly in the air, so I figured I'd take a dive into web colors to see what I could find out. This is the sort of topic that I could go into a very deep dive on and still not reach the bottom, so what follows is a whistle-stop tour of the most important parts.
 
 # RGB color space

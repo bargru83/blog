@@ -5,11 +5,9 @@
   "draft": "false"
 }
 ---ENDFRONTMATTER---
-Welcome to my blog! The way that I decided to build this blog is actually a little out of the ordinary, so I figured it would make an interesting subject for my first post.
-
 # The problem I wanted to solve
 
-I've built a few blogs in the past, always using popular blogging tools. My first couple of blogs were built on self-hosted <a href="https://wordpress.org/" id="link">Wordpress</a> installations. That was nice but it soon became clear that it was too much for my requirements. Wordpress is a large CMS (Content Management System) and I only ever used a small subset of its features. It also requires hosting on a server with a database (which costs money) and needs to be kept up to date regularly with security patches. The security part was important because my Wordpress sites were targeted by hackers almost every day.
+I've rebuilt my blog a few times in the past, until now always using popular blogging tools. My first couple of blogs were built on self-hosted <a href="https://wordpress.org/" id="link">Wordpress</a> installations. That was nice but it soon became clear that it was too much for my requirements. Wordpress is a large CMS (Content Management System) and I only ever used a small subset of its features. It also requires hosting on a server with a database (which costs money) and needs to be kept up to date regularly with security patches. The security part was important because my Wordpress sites were targeted by hackers almost every day.
 
 When I came to build another blog, static site generators were becoming popular. This idea seemed much more suited to my use case. With a static site generator blog posts could simply be written in markdown, converted to static HTML, CSS and JavaScript and hosted cheaply without the need for a backend or a database. Aside from the cost saving, having no backend means there's nothing for hackers to target too! I built a blog using a popular Ruby-based generator called <a href="https://jekyllrb.com/" id="link">Jekyll</a>, which made getting things up and running really simple. However, over time, even Jekyll seemed like more than I really needed for my basic blogging requirements.
 
@@ -67,9 +65,13 @@ Below is a screenshot of my domain's settings with my registrar, Namecheap.
 
 ![Namecheap advanced DNS settings](media/how-this-blog-is-built-namecheap.png "Namecheap advanced DNS settings")
 
+<p class="image-caption">Setting up the A Records and CNAME with my domain registrar.</p>
+
 There's also a small amount of set up to do on GitHub's side. We need to tell GitHub which directory to deploy from (docs in this case) and the custom URL. My GitHub Pages settings are shown below.
 
 ![GitHub Pages settings](media/how-this-blog-is-built-github.png "GitHub Pages settings")
+
+<p class="image-caption">My blog's settings within GitHub pages.</p>
 
 The last thing to do to enable the custom domain is to create a file in the root of the GitHub project called `CNAME` with the content set to be only the custom URL, in my case `www.barry-grubb.com`. After a couple of hours (allow up to 48 hours propagation time) the blog will now be accessible via your custom URL, in my case `http://barry-grubb.com`. Job done. Well almost...
 
@@ -90,4 +92,5 @@ To do this I opened an account with CloudFlare and was immediately greeted by a 
 Just over a month after I wrote this post GitHub finally enabled HTTPS for custom domains. Further to this when you now choose to switch to HTTPS GitHub also uses a CDN to deliver your content. This update appears to make Cloudflare almost redundant in my setup. While this is true on the surface, and it would be a simpler setup to have everything configured through GitHub, I'm intending to stay with the above GitHub/Cloudflare setup for the time being, due to the following reasons:
 
 * Currently there doesn't appear to be any way for me to interface with GitHub's CDN settings. Conversely Cloudflare allows me to see and configure a great deal about my CDN setup. Cloudflare also allows me to control the CDN cache, and invalidate it whenever I need to.
+* Cloudflare offers a huge boost in security, my helping to mitigate DDoS attacks, and offering protection against bots and scrapers. GitHub hosting doesn't currently appear to offer anything like that.
 * The downtime that would result in routing my traffic away from Cloudflare and back to GitHub. It's not a big deal, but needless downtime nonetheless.

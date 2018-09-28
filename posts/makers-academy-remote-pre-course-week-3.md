@@ -11,7 +11,7 @@ Pre-course week 3 been challenging but enjoyable, although the sheer amount of w
 
 # So much to do
 
-A few months ago in preparation for our initial interviews we were told to complete chapters 1-8 of <a href="https://pine.fm/LearnToProgram/" id="link">Chris Pine’s Learn To Program</a> (the free online version, not the slightly different print version). This week our work has been to complete the remaining chapters 9-14, although this time taken from the print version, which features more challenges than its online counterpart.
+A few months ago in preparation for our initial interviews we were told to complete chapters 1-8 of <a href="https://pine.fm/LearnToProgram/" class="link">Chris Pine’s Learn To Program</a> (the free online version, not the slightly different print version). This week our work has been to complete the remaining chapters 9-14, although this time taken from the print version, which features more challenges than its online counterpart.
 
 Only a couple of days into the week I became aware that I was already falling well behind where I should have been. Because I’m still working a full-time job all of my weekday coding has to be done late in the evenings and into the night, but even when coding until midnight every day and leaving myself with only four hours sleep (not at all recommended) I was still falling behind.
 
@@ -29,6 +29,6 @@ We worked a lot with the Rspec testing framework this week, because most of the 
 
 # ~~ Weekend challenge~~
 
-At the end of the week we were miraculously granted a reprieve when no weekend challenge was issued, most likely because by Friday so few of us had actually managed to complete the week’s work, or even get close to completing it. The only instruction for the weekend was to complete the week’s work, then to spend any additional time working through the <a href="http://rubykoans.com" id="link">Ruby koans</a> tutorial. It took me a further twelve hours on Saturday to finish the week’s work, and then Sunday was spent working though the first third of the Ruby koans.
+At the end of the week we were miraculously granted a reprieve when no weekend challenge was issued, most likely because by Friday so few of us had actually managed to complete the week’s work, or even get close to completing it. The only instruction for the weekend was to complete the week’s work, then to spend any additional time working through the <a href="http://rubykoans.com" class="link">Ruby koans</a> tutorial. It took me a further twelve hours on Saturday to finish the week’s work, and then Sunday was spent working though the first third of the Ruby koans.
 
 I find it kind of funny, the full-time Makers Academy course is billed as a super intensive experience that can drive students to tears, yet compared with trying to fit all of this pre-course work around a full-time job, I’m genuinely looking forward to the full-time course for a bit of a rest. No matter how difficult the course turns out to be, it can’t be as hard as this. However I’m loving every minute of the pre-course, I’m learning a huge amount, and I feel grateful to be on this journey. Boot camps aren’t supposed to be easy.

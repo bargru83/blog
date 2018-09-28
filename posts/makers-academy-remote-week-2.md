@@ -7,7 +7,7 @@
 ---ENDFRONTMATTER---
 ![Makers Academy remote week 2](media/makers-academy-remote-week-2-header.png "Makers Academy remote week 2")
 
-During <a href="makers-academy-remote-week-1.html" id="link">week 1</a> I realised that I was pushing myself too hard, working until I practically fell asleep each night. It seems that many others in my cohort were feeling the same way, so as a result this week the pair coding has generally been finished by around 6pm each day. After a break for dinner I’ve been getting on with some self-directed study until around 11pm, in the form of catching up with the large backlog of bookmarked articles that I’ve already accumulated. I’m still working late each night, but self-directed reading is a lot less strenuous that pairing to solve a difficult challenge.
+During <a href="makers-academy-remote-week-1.html" class="link">week 1</a> I realised that I was pushing myself too hard, working until I practically fell asleep each night. It seems that many others in my cohort were feeling the same way, so as a result this week the pair coding has generally been finished by around 6pm each day. After a break for dinner I’ve been getting on with some self-directed study until around 11pm, in the form of catching up with the large backlog of bookmarked articles that I’ve already accumulated. I’m still working late each night, but self-directed reading is a lot less strenuous that pairing to solve a difficult challenge.
 
 # Code review
 

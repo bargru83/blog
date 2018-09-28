@@ -11,7 +11,7 @@ Week 9 has been the final week of the course in which we adhere to a specific le
 
 # Makersbnb take two
 
-Our coach Sam set us a very familiar challenge for this week, to create an MVP Airbnb clone called Makersbnb, the very same challenge we were given during <a href="makers-academy-remote-week-6.html" id="link">week 6</a>! This initially came as a disappointment to some of us, we’ve thoroughly covered the Makersbnb domain already and would have appreciated something new to model. However as Sam explained it to us, the intention in repeating the challenge is to narrow our focus specifically to learning how to work with the new technology stack, rather than learning to work within a brand new domain.
+Our coach Sam set us a very familiar challenge for this week, to create an MVP Airbnb clone called Makersbnb, the very same challenge we were given during <a href="makers-academy-remote-week-6.html" class="link">week 6</a>! This initially came as a disappointment to some of us, we’ve thoroughly covered the Makersbnb domain already and would have appreciated something new to model. However as Sam explained it to us, the intention in repeating the challenge is to narrow our focus specifically to learning how to work with the new technology stack, rather than learning to work within a brand new domain.
 
 When considering how to implement Angular and Rails into one project it seems there’s no one correct way to proceed. Traditionally Rails is considered a back end framework, and Angular a front end framework, however there’s a considerable overlap between the two. It was entirely down to us which logic to handle on the front end and which to pass off to the back end, and this required serious consideration.
 

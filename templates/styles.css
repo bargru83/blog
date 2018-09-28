@@ -12,12 +12,12 @@ body {
   color: red;
 }
 
-#link {
+.link {
   color: #00AEFF;
   text-decoration: none;
 }
 
-#link:hover {
+.link:hover {
   color: #ffffff;
   background-color: #00AEFF;
 }

@@ -7,7 +7,7 @@
 ---ENDFRONTMATTER---
 ![My second developer job application](media/my-second-developer-job-application-header.png "My second developer job application")
 
-After my <a href="my-first-developer-job-application.html" id="link">first unsuccessful developer job application</a> with a very large company, I decided to try something different for my next attempt. I applied for a position as a junior JavaScript developer with a very small startup called Circular Wave, and to cut a long story short, I got the job!
+After my <a href="my-first-developer-job-application.html" class="link">first unsuccessful developer job application</a> with a very large company, I decided to try something different for my next attempt. I applied for a position as a junior JavaScript developer with a very small startup called Circular Wave, and to cut a long story short, I got the job!
 
 # Gong
 

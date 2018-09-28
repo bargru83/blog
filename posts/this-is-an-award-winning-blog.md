@@ -11,4 +11,4 @@ Very soon after receiving a rejection from <a href="my-first-developer-job-appli
 
 Of course the kudos of being selected out of everybody in my cohort for the best blog award is a prize in itself, but the £250 cash prize will definitely help to keep the wolves from the doot until I manage to find some gainful employment again.
 
-So there you have it, you’re now reading an award winning blog, haha.
+So there you have it, you're now reading an award winning blog, haha.

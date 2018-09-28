@@ -20,13 +20,13 @@ I can hardly believe that the course is one quarter way through already. It’s 
 
 # Escaping the command line
 
-This week we’ve moved away from the confines of Ruby programs running on the command line, and have begun building web applications. Throughout the week we’ve been introduced to several new technologies including the Sinatra Ruby framework, Rack, which is the underlying technology upon which Sinatra is built, and Capybara, a front-end testing framework.
+This week we’ve moved away from the confines of Ruby programs running on the command line, and have begun building web applications. Throughout the week we’ve been introduced to several new technologies including the Sinatra Ruby framework, Rack, which is the underlying technology upon which Sinatra is built, and Capybara, a front end testing framework.
 
 We’ve also been taught the fundamentals of how the web works, beginning with client-server relationships, and progressing to the various layers of logic that comprise a server. We’ve covered HTTP requests and their content, HTTP status codes, the Chrome browser developer tools and the basics of HTML and CSS.
 
 All of the above has made for a very interesting week, and one that’s offered a refreshing change from what we’d been focusing on for the last 6 weeks (including the 4 week long pre-course). It’s been really interesting to see how the back end Ruby code that we’ve been using in previous weeks communicates with the server routing code and the front end code to create what is almost considered a full stack web application. I say almost, because we haven’t covered persistent storage via databases yet, so we’ve been persisting our data within global variables. However we’ve been told more times than I can count that global variables are bad practice, and should rarely if ever be used within production code. Once we learn about databases next week we’ll have covered the full stack, and can largely leave global variables behind.
 
-It’s nice to see how everything in this course builds upon previously learned concepts. Sinatra would have been very daunting if it wasn’t for the fact that we’re all feeling quite confident coding in Ruby now. Testing front-end interactions with Capybara would seem incredibly complicated if it wasn’t for the fact that it works in much the same was as the Rspec testing framework which we’ve been using for the past three weeks. Three weeks doesn’t sound a long time, I know, but using a tool all day, every day for three weeks can make it feel familiar quite quickly.
+It’s nice to see how everything in this course builds upon previously learned concepts. Sinatra would have been very daunting if it wasn’t for the fact that we’re all feeling quite confident coding in Ruby now. Testing front end interactions with Capybara would seem incredibly complicated if it wasn’t for the fact that it works in much the same was as the Rspec testing framework which we’ve been using for the past three weeks. Three weeks doesn’t sound a long time, I know, but using a tool all day, every day for three weeks can make it feel familiar quite quickly.
 
 # RPSLS
 

@@ -8,7 +8,7 @@ const {
   deleteFolderRecursive
 } = require('./lib/utils');
 
-const converter = new showdown.Converter({strikethrough: true});
+const converter = new showdown.Converter({ strikethrough: true });
 
 // set global vars
 const postIndex = [];
@@ -183,7 +183,14 @@ if (postFileNames) {
     // create a var to hold all links of this tag type
     let tagLinks = '';
     // fetch all posts using this tag
-    const thisTagsPosts = postsByTag[tag].reverse();
+    const thisTagsPosts = postsByTag[tag].sort((a, b) => {
+      if (a.date < b.date)
+        return -1;
+      if (a.date > b.date)
+        return 1;
+      return 0;
+    }).reverse();
+
     // for each fecthed post
     thisTagsPosts.forEach((post) => {
       // format the post's date nicely

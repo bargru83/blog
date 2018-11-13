@@ -1,7 +1,7 @@
 {
   "title": "Positive and negative behaviors and the chain system",
   "date": "2016-06-23",
-  "tags": "['personal development', 'growth mindset']",
+  "tags": "['personal development']",
   "draft": "false"
 }
 ---ENDFRONTMATTER---

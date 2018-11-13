@@ -1,7 +1,7 @@
 {
   "title": "Earning my freedom (chair)",
   "date": "2018-04-07",
-  "tags": "['lifestyle', 'personal development']",
+  "tags": "['random', 'personal development']",
   "draft": "false"
 }
 ---ENDFRONTMATTER---

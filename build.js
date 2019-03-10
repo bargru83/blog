@@ -207,7 +207,7 @@ if (postFileNames) {
     });
 
     // Create header text for the tag page
-    const tagPageTitle = `Posts by tag: ${cleanTag(tag)}`;
+    const tagPageTitle = `Barry Grubb: Posts by tag: ${cleanTag(tag)}`;
 
     // insert the list of posts of this tag type, and the page title in to the tag page template
     const finalTagPage = tagsTemplate.replace('---CONTENT---', tagLinks).replace('---TAG---', tagPageTitle);

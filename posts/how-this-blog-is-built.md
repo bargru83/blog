@@ -73,11 +73,11 @@ There's also a small amount of set up to do on GitHub's side. We need to tell Gi
 
 <p class="image-caption">My blog's settings within GitHub pages.</p>
 
-The last thing to do to enable the custom domain is to create a file in the root of the GitHub project called `CNAME` with the content set to be only the custom URL, in my case `www.bazgrubb.com`. After a couple of hours (allow up to 48 hours propagation time) the blog will now be accessible via your custom URL, in my case `http://bazgrubb.com`. Job done. Well almost...
+The last thing to do to enable the custom domain is to create a file in the root of the GitHub project called `CNAME` with the content set to be only the custom URL, in my case `www.barry-grubb.com`. After a couple of hours (allow up to 48 hours propagation time) the blog will now be accessible via your custom URL, in my case `http://barry-grubb.com`. Job done. Well almost...
 
 # What about HTTPS?
 
-You might have noticed that my blog is now accessible via `http://www.bazgrubb.com`. HTTP, not HTTPS. However serving content via HTTPS rather than HTTP is preferable for several reasons, and my blog currently can't do that. If at this stage I try to visit `https://www.bazgrubb.com` (note the `https` this time) Chrome will give a big red warning that the site might not be safe. Other browsers can be expected to behave in a similar way, and that's a perfect way to scare away visitors. It's also expected that Google will prefer sites served over HTTPS in its search results going forward.
+You might have noticed that my blog is now accessible via `http://www.barry-grubb.com`. HTTP, not HTTPS. However serving content via HTTPS rather than HTTP is preferable for several reasons, and my blog currently can't do that. If at this stage I try to visit `https://www.barry-grubb.com` (note the `https` this time) Chrome will give a big red warning that the site might not be safe. Other browsers can be expected to behave in a similar way, and that's a perfect way to scare away visitors. It's also expected that Google will prefer sites served over HTTPS in its search results going forward.
 
 GitHub Pages does provide the ability to serve content over HTTPS, but only if you're using their own GitHub Pages URL (the bargru83.github.io formatted one) to do that. Because I'm using a custom domain I'm out of luck here. People have been complaining about this issue for at least 4 years and it still hasn't been rectified by GitHub, so I doubt that'll change any time soon.
 

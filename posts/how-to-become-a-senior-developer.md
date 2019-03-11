@@ -4,7 +4,7 @@
   "tags": "['personal development']"
 }
 ---ENDFRONTMATTER---
-![How to become a senior developer](media/how-to-become-a-senior-developer.jpg "How to become a senior developer")
+![How to become a senior developer](media/how-to-become-a-senior-developer-header.jpg "How to become a senior developer")
 
 The title of this post should really be: "How to become a senior developer, from somebody who is one, relayed to you by somebody who isn't one"!
 

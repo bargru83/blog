@@ -1,8 +1,7 @@
 {
   "title": "How to become a senior developer",
   "date": "2017-07-01",
-  "tags": "['personal development']",
-  "draft": "true"
+  "tags": "['personal development']"
 }
 ---ENDFRONTMATTER---
 ![How to become a senior developer](media/how-to-become-a-senior-developer.jpg "How to become a senior developer")

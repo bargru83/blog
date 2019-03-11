@@ -179,3 +179,8 @@ h2 {
 .tag-page-post-container {
   padding-bottom: 32px;
 }
+
+.footer {
+  text-align: center;
+  padding-top: 32px;
+}

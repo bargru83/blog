@@ -86,34 +86,41 @@ strong {
 }
 
 .index-page-post-title, .tag-page-post-title {
-  /* color: #000000;
-  text-decoration: none; */
+  /* color: #000000; */
+  text-decoration: underline;
+  color: #1ba2fc;
 }
 
 .index-page-post-title:hover, .tag-page-post-title:hover {
-  /* color: #1ba2fc;
-  text-decoration: underline; */
+  /* color: #1ba2fc; */
+  text-decoration: none;
 }
 
 .index-page-post-tag, .in-post-tag {
-  /* color: #1ba2fc;
-  padding-right: 12px;
-  text-decoration: none; */
+  color: slategrey;
+  padding-right: 0.5rem;
+  text-decoration: underline;
+  font-size: 0.9rem;
 }
 
 .index-page-post-tag:hover, .in-post-tag:hover {
-  /* color: #000000;
-  text-decoration: underline; */
+  text-decoration: none;
 }
 
 .index-page-post-container {
-  /* padding-bottom: 32px; */
+  padding-bottom: 1.5rem;
 }
 
 .index-page-post-date, .in-post-date, .tag-page-post-date {
   /* font-style: italic;
   margin: 0;
   padding: 0; */
+  color: slategrey;
+  font-size: 0.9rem;
+}
+
+.top-menu {
+  margin-bottom: 2rem;
 }
 
 .top-menu-entry {
@@ -125,7 +132,7 @@ strong {
 }
 
 .top-menu-entry:hover {
-  /* color: #1ba2fc; */
+  color: #1ba2fc;
 }
 
 .top-menu-entry-active {
@@ -185,8 +192,9 @@ h2 {
 .profile-img {
   max-width: 150px;
   max-height: 150px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  /* padding-top: 2rem; */
+  /* padding-bottom: 2rem; */
+  margin-bottom: 2rem;
   border-radius: 50%;
 }
 

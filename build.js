@@ -200,14 +200,14 @@ if (postFileNames) {
       const tagLinkElement =
         `<div class="tag-page-post-container"> \
       <a href="../${post.writeFileName}.html" class="tag-page-post-title">${post.title}</a> \
-      <p class="tag-page-post-date">${dateString}</p> \
+      <div class="tag-page-post-date">${dateString}</div> \
       </div>`
       // add this to the entire list of tag links
       tagLinks += tagLinkElement;
     });
 
     // Create header text for the tag page
-    const tagPageTitle = `Barry Grubb: Posts by tag: ${cleanTag(tag)}`;
+    const tagPageTitle = `Posts tagged with '${cleanTag(tag)}'`;
 
     // insert the list of posts of this tag type, and the page title in to the tag page template
     const finalTagPage = tagsTemplate.replace('---CONTENT---', tagLinks).replace('---TAG---', tagPageTitle);

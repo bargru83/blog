@@ -117,7 +117,7 @@ if (postFileNames) {
   });
 
   // read in html index page template
-  const indexTemplatePath = './templates/index.html';
+  const indexTemplatePath = './templates/blog.html';
   const indexTemplate = fs.readFileSync(indexTemplatePath, 'utf8');
 
   // sort posts in the post index in reverse chronological order
@@ -171,7 +171,7 @@ if (postFileNames) {
 
   // insert the html elements from the list of post entries in to the index page html template
   const finalIndexPage = indexTemplate.replace('---CONTENT---', indexElements);
-  const indexWritePath = `./docs/index.html`;
+  const indexWritePath = `./docs/blog.html`;
   fs.writeFileSync(indexWritePath, finalIndexPage);
 
   // read in html tags pages template file

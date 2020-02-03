@@ -50,141 +50,181 @@ table {
 /* custom */
 
 body {
-  font-family: 'Courier New', Courier, monospace;
-  padding: 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* padding: 1rem; */
 }
 
 p {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 ul, ol {
-  list-style-type: circle;
-  padding: 2em;
+  /* list-style-type: circle;
+  padding: 2rem;
   padding-top: 0;
-  padding-bottom: 1em;
+  padding-bottom: 1rem; */
 }
 
 strong {
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .page-container {
-  width: 100%;
+  /* width: 100%; */
+  min-height: calc(100vh - 3rem);
+  margin-top: 1rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+  color: #222222;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* color: #000000; */
 }
 
 .index-page-post-title, .tag-page-post-title {
-  color: #000000;
-  text-decoration: none;
+  /* color: #000000;
+  text-decoration: none; */
 }
 
 .index-page-post-title:hover, .tag-page-post-title:hover {
-  color: #ff0000;
-  text-decoration: underline;
+  /* color: #1ba2fc;
+  text-decoration: underline; */
 }
 
 .index-page-post-tag, .in-post-tag {
-  color: #ff0000;
+  /* color: #1ba2fc;
   padding-right: 12px;
-  text-decoration: none;
+  text-decoration: none; */
 }
 
 .index-page-post-tag:hover, .in-post-tag:hover {
-  color: #000000;
-  text-decoration: underline;
+  /* color: #000000;
+  text-decoration: underline; */
 }
 
 .index-page-post-container {
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
 }
 
 .index-page-post-date, .in-post-date, .tag-page-post-date {
-  font-style: italic;
+  /* font-style: italic;
   margin: 0;
-  padding: 0;
+  padding: 0; */
 }
 
 .top-menu-entry {
-  color: #ff0000;
+  /* font-size: 1rem; */
+  color: slategrey;
   text-decoration: none;
+  padding-right: 1rem;
+  font-weight: 400;
 }
 
 .top-menu-entry:hover {
-  color: #ff0000;
-  text-decoration: underline;
+  /* color: #1ba2fc; */
 }
 
 .top-menu-entry-active {
-  color: #ff0000;
-  text-decoration: underline;
+  /* font-size: 1rem; */
+  color: #1ba2fc;
+  text-decoration: none;
+  padding-right: 1rem;
+  font-weight: 400;
 }
 
 .link {
-  color: #ff0000;
-  text-decoration: none;
+  /* color: #1ba2fc;
+  text-decoration: none; */
 }
 
 .link:hover {
-  color: #000000;
-  text-decoration: underline;
+  /* color: #000000;
+  text-decoration: underline; */
 }
 
 code {
-  background-color: yellow;
-  color: #000000;
+  /* background-color: yellow;
+  color: #000000; */
 }
 
 h1 {
-  font-size: 2em;
-  line-height: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  font-size: 2rem;
+  font-weight: 400;
+  /* line-height: 3rem; */
+  padding-bottom: 2rem;
 }
 
 h2 {
-  font-size: 2em;
-  line-height: 1.25em;
+  /* font-size: 2rem;
+  line-height: 1.25rem; */
 }
 
 .aside {
-  background-color: yellow;
+  /* background-color: yellow;
   font-style: italic;
   margin-bottom: 0;
-  padding: 1em;
+  padding: 1rem; */
 }
 
 .aside h2 {
-  font-size: 1.5em;
-  line-height: 1.5em;
+  /* font-size: 1.5rem;
+  line-height: 1.5rem; */
 }
 
 .post-content img, .responsive-img {
-  max-width: 100%;
+  /* max-width: 100%;
   max-height: 100%;
   display:block;
-  margin: auto;
+  margin: auto; */
+}
+
+.profile-img {
+  max-width: 150px;
+  max-height: 150px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 50%;
 }
 
 .image-caption {
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .tag-page-post-container {
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
 }
 
 .footer {
+  height: 1rem;
   text-align: center;
-  padding-top: 32px;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+  color: #222222;
+  padding-bottom: 1rem;
+  /* padding-top: 32px; */
 }
 
 em {
-  font-style: italic;
+  /* font-style: italic; */
+}
+
+#social-container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+ion-icon {
+  font-size: 1.5rem;
+  color: slategrey;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+ion-icon:hover {
+  color: #1ba2fc;
 }

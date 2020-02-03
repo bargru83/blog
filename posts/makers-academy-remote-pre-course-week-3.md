@@ -27,7 +27,7 @@ Regarding the work itself, it's been challenging and very enjoyable to work thro
 
 We worked a lot with the Rspec testing framework this week, because most of the Learn To Program challenges came with their own Rspec tests. However these tests weren't created by Chris Pine, but presumably by somebody on the Makers Academy team, and there were some minor discrepancies. There were times when Pine's challenges specified that we were free to code particular features however we wished, but then the Rspec test was structured in such a way that it expected only one particular solution, otherwise it would fail. I suppose that decisions had to be set in stone when writing the tests, because it would have been difficult to write tests that could cater for such open-ended instructions. What it meant in practice however was that once we'd read what Chris Pine wanted us to do for a challenge, we'd then have to check the specs (that's what the cool kids call Rspec tests) to see what they actually wanted from us, before we could begin to develop a solution. Perhaps that was Makers Academy's idea all along?
 
-# ~~ Weekend challenge~~
+# ~~Weekend challenge~~
 
 At the end of the week we were miraculously granted a reprieve when no weekend challenge was issued, most likely because by Friday so few of us had actually managed to complete the week's work, or even get close to completing it. The only instruction for the weekend was to complete the week's work, then to spend any additional time working through the <a href="http://rubykoans.com" class="link">Ruby koans</a> tutorial. It took me a further twelve hours on Saturday to finish the week's work, and then Sunday was spent working though the first third of the Ruby koans.
 

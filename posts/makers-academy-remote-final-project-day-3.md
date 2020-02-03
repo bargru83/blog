@@ -15,7 +15,7 @@ Early this morning we finished work on the mockups. Throughout the course we've 
 
 By spiking the basic structure of our project we discovered some issues relating to user account creation which would need addressing early on. However various members of our group had conflicting opinions as to how we should address those issues, and in my opinion far too much time was spent debating the benefits of either position without making any real progress. While it's very important to discuss disagreements within the team, it's definitely possible, especially during such a short project, to spend far too long debating, when effectively whichever route is selected would be more productive than simply debating both for such a long time.
 
-# Pairing
+# Pairing
 
 For most of the day we've 'mob' worked as a group of four, however in the afternoon we broke into our first pair coding sessions of this project, with one pair developing the user account and profile creation code, and the other pair building the road trip model and its various properties. After two and a half days of working as a group of four it felt good to break into pairs, and very productive too.
 

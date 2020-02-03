@@ -23,6 +23,6 @@ I intended to make good use of Git branches for each new feature, but as I began
 
 Afterwards we jumped into a group video meeting so that Sam could scrutinise a few selected attempts. As always it was interesting to see how others had tackled the same challenge, and I found that my method of approaching the challenge was a common one, which is hardly a surprise I guess given our shared learning experiences.
 
-# That's a wrap
+# That's a wrap
 
 Today has marked our final day as a group with our coach Sam, and I can't let that pass without mentioning how much of an effect he's had on our Makers Academy experience. Sam has been a fantastic coach, and he's done an amazing job of guiding us through our first three months as junior developers. While I'm sure that all Makers Academy coaches are very knowledgable and great at teaching, I know that some of them are much newer to coding than Sam, and I believe that Sam's wealth of experience as a senior developer has allowed him to share deeper insights with us than would be possible from a less experienced coach. Regardless of that however he's been a fantastic coach, a naturally gifted teacher, and I couldn't have hoped for more.

@@ -25,7 +25,7 @@ In the working world the use of Ruby is plentiful, but many will tell you that i
 
 The truth is that many popular programming languages are very, very similar. The programming concepts you'll pick up when learning Ruby will be applicable to a huge number of languages, and the best practices you'll learn are almost universal.
 
-# It's not just web development
+# It's not just web development
 
 The Makers Academy course is advertised as a web development bootcamp. The reasons that I believe web development is the focus of the course are because it's a skill that's in high demand, and also it has a very low barrier to entry. In some other types of development, compiled languages are standard, which require your code to go through a lengthy compilation process each time you want to run something that's changed. By contrast for web development all you have to do is refresh your browser, and occasionally restart a server from the command line to see your changes, which is a nice quick process.
 

@@ -32,7 +32,7 @@ Ana then explained the importance of personal wellbeing throughout the course. S
 Ana suggested that all students keep a blog throughout the course, because blogging serves as an effective brain-dumping exercise, helping to structure your thoughts. I know that others at Makers Academy also suggest blogging because it's a great way to build your personal brand, so I've already begun writing these early blog posts as plain text files, before I even have a blog to post them to. It was mentioned that at the end of the course a cash prize will be awarded to the best student blog – so that offers more incentive if it's needed.
 
 
-# The end of the night
+# The end of the night
 Ptolemy then took the to mic again to discuss a handful of techniques to help us start thinking like software developers, with regards to breaking down large problems in to smaller ones. Finally it was explained that we'd receive further details of the pre-course soon via email, and then the talk was at its end.
 
 As for the on-site students, they went to the local pub where Makers Academy bought the first round of drinks. As for us remote students we couldn't do that online, so were left in our Slack channel. Many of us stayed for a short while, getting to know one another, some stating when they'd be available for pair coding during the pre-course, etc. It felt like there was a genuine buzz of anticipation, even in the text-based medium of our Slack channel, and I left the event very excited for what's to come in the months ahead.

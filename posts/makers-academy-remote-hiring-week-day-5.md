@@ -9,7 +9,7 @@
 
 I'm really glad that I made the effort to travel to Makers Academy HQ in London for the final day of our course. For the majority of remote students the day had pretty much no input from Makers Academy, it was simply a day set aside to begin applying for jobs. For the on-site students a careers fair was planned with a selection of hiring partners who are currently looking for junior developers. A handful of us remote students were close enough to London to attend the careers fair, and it made for an awesome final day.
 
-# Everything is real
+# Everything is real
 
 It was really strange meeting some of my cohort in real life after having worked remotely with them so closely for the past four months (including the pre-course). It was equally strange seeing the Makers Academy HQ. Over the past few months we've seen several views of parts of the building in the backgrounds of our workshops, and in marketing materials, and to actually attend in person made the place feel somehow more real.
 

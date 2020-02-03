@@ -15,7 +15,7 @@ We began the day with a Zoom video meeting that brought our entire cohort togeth
 
 Soon we were back in the group meeting for a lengthy session in which rather than introducing ourselves we introduced the others from our break-out sessions to the rest of the cohort, a Makers Academy tradition. It was good to learn about everybody, and it helped the screen full of digital names and faces to begin to feel like real people.
 
-# Housekeeping
+# Housekeeping
 
 Following this was a lecture from Sam about how we're expected to behave during the course. There was a long list of points to consider, but honestly if anybody actually learned anything during this part I'd be concerned, because it should all be covered by common sense and decency.
 

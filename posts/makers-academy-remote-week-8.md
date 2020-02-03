@@ -15,11 +15,11 @@ I've used the phrase MVC above without explanation, so here we go. Following a M
 
 AngularJS is a framework which unusually places a lot of what is traditionally considered back end logic on to the front end, causing us to reconsider what we'd previously believed to be fairly rigid constraints on what each end of the stack should do. Angular (I'm hereby dropping the JS because: hassle) does address the concepts of Views and Controllers, only that it approaches them differently from how a traditional MVC environment would. Angular has proven difficult to categorise alongside traditional MVC frameworks, so is generally considered a MVW (Model View Whatever) framework. In other words, call it what you want.
 
-# Angular
+# Angular
 
 The concept behind Angular's initial development was to redesign ‘HTML the way it should be'. When working with Angular, logic is placed inside Angular controllers, or extracted into separate entities called factories, services and providers, which largely all do the same thing with slight differences. The logic is then implemented by attaching what Angular calls directives to specific HTML elements within the views, creating what is known as 2-way data binding. 2-way data binding means that any changes to the controller are immediately reflected within the view without the need to refresh the page, and likewise updates within the views are immediately propagated to the controllers.
 
-# GitHub profile viewer
+# GitHub profile viewer
 
 Our week with Angular felt like a very brief crash course. We were allocated only Monday and Tuesday to learn the basics by following an official Google tutorial while keeping particular questions posed by Makers Academy in mind. From Wednesday onwards we were then split into groups to work on a small scale Angular project. The project task was to build a GitHub profile viewer, an application that acts as a search engine of GitHub users by polling the GitHub API for data. In my opinion this project was perfectly sized for the given amount of time. As a group we did manage to implement most of the intended features, although we ran out of time to apply the finishing touches we'd have liked, perhaps another day or two would have afforded us the opportunity to get the project to a point we would consider complete.
 

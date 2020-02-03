@@ -28,7 +28,7 @@ All of the above has made for a very interesting week, and one that's offered a 
 
 It's nice to see how everything in this course builds upon previously learned concepts. Sinatra would have been very daunting if it wasn't for the fact that we're all feeling quite confident coding in Ruby now. Testing front end interactions with Capybara would seem incredibly complicated if it wasn't for the fact that it works in much the same was as the Rspec testing framework which we've been using for the past three weeks. Three weeks doesn't sound a long time, I know, but using a tool all day, every day for three weeks can make it feel familiar quite quickly.
 
-# RPSLS
+# RPSLS
 
 As for the weekend challenge, we were tasked with solidifying the week's concepts by building a web-based version of the popular Rock Paper Scissors (RPS) game. A game of RPS is trivial to code (even if you do optionally add Lizard and Spock into the mix, as I chose to), but it's in properly structuring the code as a web app that the challenge lies. The main logic had to be handled by Ruby, using upon the Sinatra framework to provide the routing/controlling and views. Rspec was used to test the back end and Capybara to test the front end. HTML was used to build out the website content. HTTP Get requests were used to read from the website, and post requests were used to push player names and choices to the back end. RPS may not sound like much of challenge, but it's the fact that it provided an opportunity to use all of these technologies together that made it so useful as study aid, and so complicated to implement.
 

@@ -31,7 +31,7 @@ After a handful of takes we managed to produce a full recorded run through of ou
 
 Thankfully it did, our presentation went well, and surprisingly so did all of the other group's presentations, and aside from a handful of small human error mistakes like people forgetting their lines or talking over each other, the event ran without a hitch for everybody. Once our video had played we were able to sit back and enjoy the rest of the event, and after focusing only on our our small group for the past two weeks it was great to see what the rest of our cohort had been up to during the final project. Every group managed to present a professionally built MVP, and we were pleased to see that our project held up well against the others, considering our smaller group size. Given a little more time every project that was presented could have been turned into a polished product capable of serving a large audience, and for a group of people who knew almost nothing about coding only a few months ago, I think that's pretty amazing.
 
-# All done!
+# All done!
 
 Now that the presentations have finished we're all officially Makers Academy graduates. The main learning content of the course is now complete, and all that remains is hiring week, which at this point in time I don't know much about.
 

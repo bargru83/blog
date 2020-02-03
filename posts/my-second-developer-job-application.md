@@ -17,7 +17,7 @@ I couldn't make it to London myself to bang Makers Academy's ceremonial gong, as
 
 The process of applying for this job was very different to my previous attempt. Whereas the previous position was with one of Makers Academy's hiring partners, this one isn't, and was simply found on a public job site. For full disclosure, the position was actually brought to my attention by Will from the Makers Academy team, a fact for which I'm hugely grateful. Once I'd applied for the position I was in regular contact with the co-founder of the company. This was a nice change from what I've seen from larger companies, where you tend to bounce between hiring departments and HR people. With such a small startup all contact took place directly with the company founders themselves.
 
-# A small startup with a big vision
+# A small startup with a big vision
 
 The startup in question, Circular Wave, was founded in order to create products and services that aim to resolve some of the problems the NHS is currently facing. The company was co-founded by an ex-doctor, who upon experiencing those problems within the NHS first hand, decided to do something about it. He took some time out from work to teach himself to code, and together with a friend who is an experienced developer, founded the company.
 

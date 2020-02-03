@@ -11,7 +11,7 @@ The fact that it's currently Thursday of week 2 and I'm only now managing to pos
 
 Week 1 was fantastic and I loved every minute, although it's become clear already that I need to address my work/life balance a little. During week 1 I coded until at least 10.30pm each day, I got up at 6.30am on Saturday to code with others from my cohort until 11pm, and Sunday was another all-day coding marathon too. Coding is still a novelty and I'm loving it so much that I'm happy to spend all of my time on it, and the long hours I've been putting in have to a large degree been in order to keep up with the workload. However there has to come a point when I accept that sometimes I'm not going to keep up with the workload, rather than pushing myself to the point of exhaustion. It seems like there's always more to do, and that completion isn't the point.
 
-# Boris bikes
+# Boris bikes
 
 The work this week has been enjoyable. Throughout week 1 we've been tasked with building a command line version of London's Boris Bikes bike rental system, with a strong emphasis on learning the principles of TDD (Test Driven Development) along the way. According to TDD no production code can be written until a suitable test has first been created. It can be jarring at first to discover that the first step is to write a test which we already know will fail, because it's testing a feature of our production code that hasn't been written yet. However reaching that first fail is important, because then when we can go on to write the production code that satisfies the test, we can watch the test turn from a fail to a pass, and be sure that our production code does exactly what we hoped it would. Once a test has been passed we go in to the refactor stage, which is an opportunity to revisit the code we just created and improve it to better follow the Object Oriented Programming best practices we've been learning about.
 
@@ -35,7 +35,7 @@ While there is a clear benefit in working on the same challenge multiple times, 
 
 It wasn't just myself who felt this way, which is why a few of us agreed to spend the whole of Saturday working together to finish the week's Boris Bikes challenge, before attempting the weekend challenge alone on Sunday. I was sat at my desk from 7am on Saturday until 11pm (with some breaks), and we still didn't manage to complete the week's challenge, but we did get very close. Makers Academy would say that this catch-up session was unnecessary, but we felt the need to do it so that we weren't at a disadvantage compared with others in our cohort who didn't have to drop back regularly throughout the week.
 
-# Airport system
+# Airport system
 
 The weekend challenge was based around developing a command line airport system, using many of the same techniques we used during the week. The primary difference is that weekend challenges are to be completed alone, to test how well we're learning as individuals. This was a fun challenge, and I'm really pleased with how well my solution worked out. While I love pair-coding there's something really nice about completing a project alone. When pair coding there are always compromises to be made, and dropping back to a partner's code base brings the feeling that the work isn't really your own, you don't feel an ownership of the project, and need to keep familiarising yourself with how somebody else has tackled a problem that you might have solved differently. Of course in the real world developers often do jump in and out of established code bases, so it's a very useful skill to acquire, but having the chance to work on a solo project is just a different experience.
 
@@ -43,7 +43,7 @@ The weekend challenge was based around developing a command line airport system,
 
 <p class="image-caption">The weekend's airport challenge. So far our programs are confined to the command line, but that offers a lot of flexibility.</p>
 
-# Day-to-day routine
+# Day-to-day routine
 
 Aside from the challenges, each week day there are stand-up meetings, in which we take it in turns to speak about what we achieved yesterday, what we want to achieve today and anything that might be blocking us. These stand-ups are really useful, and often several of us seem to be sharing similar problems, which can lead to our coach Sam holding a break-out session to clear up some issues, or perhaps he'll suggest a resource that will help. Most days there are also workshops, which take the form of Sam demonstrating various concepts, and are always enlightening, and presented in a very open manner that invites questions.
 

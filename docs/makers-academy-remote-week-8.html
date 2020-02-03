@@ -20,11 +20,10 @@
 <body>
   <div class="page-container">
     <div class="top-menu">
-      <a href="./index.html" class="top-menu-entry-active">Blog</a>
-      <a href="./about.html" class="top-menu-entry">About</a>
+      <a href="./index.html" class="top-menu-entry">About</a>
+      <a href="./blog.html" class="top-menu-entry-active">Blog</a>
       <a href="./cv.html" class="top-menu-entry">CV/Resume</a>
-      <a href="./work.html" class="top-menu-entry">Work</a>
-      <a href="./contact.html" class="top-menu-entry">Contact</a>
+      <a href="./work.html" class="top-menu-entry">Things I've made</a>
     </div>
     <h1 class="in-post-title">Makers academy remote - week 8</h1>
     <a href="tags/web development.html" class="in-post-tag">web development</a><a href="tags/makers academy.html" class="in-post-tag">makers academy</a>
@@ -41,8 +40,8 @@
 <p>Angular makes it relatively easy to get an application up and running quickly, and it didn't take long to have our local dummy data (as opposed to data actually pulled from GitHub) displayed within our views. Surprisingly working with the GitHub API to fetch the real data was actually the most difficult challenge for our group. Ideally we'd have liked to request from the GitHub API the data for all members of a given GitHub organisation (the Makers Academy organisation in our example) and be returned the entire list in JSON format. However this isn't quite so simple due to a combination of factors. For one thing, when polling the API we were initially acting as an unauthorised user, which confusingly only returned the data for a small handful of members, only 24 of the total 647 members at the time were returned to us to be exact. After some investigation we discovered that the 24 members which we were receiving were those 24 who had at some point in time opted to change their Makers Academy organisation status from the default ‘private' setting to ‘public'. I suspect they probably all did so simply for the same challenge that we were currently facing.</p>
 <p>The solution to this particular issue was to poll the GitHub API while logged in as a member of the same organisation which we were requesting data for, which would remove the private members limitation. However using a particular member's credentials was not a simple solution because we clearly wanted to avoid pushing anybody's credentials to the GitHub repository for security reasons. This issue led us in search of methods to extract the credentials from environment variables, something which is trivial when working in Ruby, but which in the short amount of time allocated we didn't solve in a satisfactory manner with JavaScript. We did however use the credentials for local testing purposes, and this led us to another issue. We were surprised to learn that even with authorised credentials our request still only returned the data for 30 members. It transpired that the way in which we were polling the API could only return a maximum of 30 results at a time, because it was designed with pagination in mind. We discovered an alternative method of polling the API, but even this would only return a maximum of 100 results at a time. We had no more time to devote to this issue, so our app could only ever display a maximum of 100 users. Of course we'd np doubt find a solution given more time.</p>
 <p>This week we were given no weekend challenge, but were instead afforded the extra time to work on our week's project. For this week's relatively small scale project this enabled us to begin working on the front end visual design, something which is generally overlooked on the Makers Academy course, but which I'm always keen to work with. However the primary focus for this week was Angular, and I believe that this project provided us with a solid introduction. I leave this week appreciating the concept of Angular, but with many questions regarding the ways in which it differs to the technologies we've previously used. As with pretty much everything that this course introduces us to, a lot of self study is required before I could begin to feel comfortable with it.</p></div>
-    <div class="footer">&#x24B8; Barry Grubb</div>
   </div>
+  <div class="footer">Made with ❤️, ☕, and a 💻 by Barry Grubb.</div>
 </body>
 
 </html>

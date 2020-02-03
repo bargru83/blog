@@ -20,11 +20,10 @@
 <body>
   <div class="page-container">
     <div class="top-menu">
-      <a href="./index.html" class="top-menu-entry-active">Blog</a>
-      <a href="./about.html" class="top-menu-entry">About</a>
+      <a href="./index.html" class="top-menu-entry">About</a>
+      <a href="./blog.html" class="top-menu-entry-active">Blog</a>
       <a href="./cv.html" class="top-menu-entry">CV/Resume</a>
-      <a href="./work.html" class="top-menu-entry">Work</a>
-      <a href="./contact.html" class="top-menu-entry">Contact</a>
+      <a href="./work.html" class="top-menu-entry">Things I've made</a>
     </div>
     <h1 class="in-post-title">Makers academy remote - final project day 8</h1>
     <a href="tags/web development.html" class="in-post-tag">web development</a><a href="tags/makers academy.html" class="in-post-tag">makers academy</a>
@@ -36,8 +35,8 @@
 <p>In the afternoon we moved away from the Rails side of the app to begin working with the Google Maps API, which will provide our site's mapping capabilities. We began by implementing Geocoder, a Ruby gem that allows for addresses to be input as text translating those addresses into standard latitude and longitude coordinates. We then used the Google Maps API to plot those coordinates and display them on a map of the road trip.</p>
 <p>As additional stops are added to the road trip the map adjusts accordingly to keep each stop within view. However when no stops have been added Google defaults unhelpfully to displaying the very centre of the world map. To rectify this we decided to implement geolocation using the user's web browser, to turn their current location into coordinates that could be plotted on to the map as a default position, so that when no stops have been added to a road trip, the map for that road trip defaults to showing the user's current location, rather than the centre of the world map.</p>
 <p>Learning to work with Google Maps and Geocoder at this level has been difficult but very rewarding, and has made a nice change from working with Rails.</p></div>
-    <div class="footer">&#x24B8; Barry Grubb</div>
   </div>
+  <div class="footer">Made with ❤️, ☕, and a 💻 by Barry Grubb.</div>
 </body>
 
 </html>

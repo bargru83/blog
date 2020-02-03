@@ -67,12 +67,12 @@ ul, ol {
 }
 
 strong {
-  /* font-weight: bold; */
+  font-weight: 400;
 }
 
 .page-container {
   /* width: 100%; */
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 4rem);
   margin-top: 1rem;
   max-width: 700px;
   margin-left: auto;
@@ -153,9 +153,20 @@ strong {
   text-decoration: none;
 }
 
+pre {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
 code {
-  /* background-color: yellow;
-  color: #000000; */
+  background-color: #2b2b2b;
+  color: #f8f8f2;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-family: monospace;
+  font-size: 1rem;
 }
 
 h1 {
@@ -171,15 +182,16 @@ h2 {
 }
 
 .aside {
-  /* background-color: yellow;
-  font-style: italic;
+  background-color: #1ba2fc;
+  padding: 1rem;
+  /* font-style: italic;
   margin-bottom: 0;
   padding: 1rem; */
 }
 
 .aside h2 {
-  /* font-size: 1.5rem;
-  line-height: 1.5rem; */
+  font-weight: 400;
+  /* line-height: 1.5rem; */
 }
 
 .post-content img, .responsive-img {
@@ -187,6 +199,10 @@ h2 {
   max-height: 100%;
   display:block;
   margin: auto;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #1ba2fc;
+  outline-offset: 1px;
 }
 
 .profile-img {
@@ -199,7 +215,9 @@ h2 {
 }
 
 .image-caption {
-  /* font-style: italic; */
+  font-style: italic;
+  color: #1ba2fc;
+  text-align: center;
 }
 
 .tag-page-post-container {
@@ -214,6 +232,7 @@ h2 {
   line-height: 24px;
   color: #222222;
   padding-bottom: 1rem;
+  padding-top: 1rem;
   /* padding-top: 32px; */
 }
 
@@ -239,4 +258,105 @@ ion-icon:hover {
 
 .post-content h1 {
   padding-top: 2rem;
+}
+
+/* highlight js */
+/* a11y-dark theme */
+/* Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css */
+/* @author: ericwbailey */
+
+/* Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #d4d0ab;
+}
+
+/* Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #ffa07a;
+}
+
+/* Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #f5ab35;
+}
+
+/* Yellow */
+.hljs-attribute {
+  color: #ffd700;
+}
+
+/* Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #abe338;
+}
+
+/* Blue */
+.hljs-title,
+.hljs-section {
+  color: #00e0e0;
+}
+
+/* Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #dcc6e0;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #2b2b2b;
+  color: #f8f8f2;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .hljs-addition,
+  .hljs-attribute,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-bullet,
+  .hljs-comment,
+  .hljs-link,
+  .hljs-literal,
+  .hljs-meta,
+  .hljs-number,
+  .hljs-params,
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-type,
+  .hljs-quote {
+        color: highlight;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag {
+        font-weight: bold;
+    }
 }

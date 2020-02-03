@@ -64,7 +64,7 @@ Currently (at the time of general CSS3 browser adoption) we have four possible w
 
 RGB values are a good example to start with, because we can easily see how they map to the underlying RGB values that the system uses, because literally speaking for the most part they are the same thing. To set a color in css using RGB values we use the following syntax:
 
-```
+```css
 p { color: rgb(255, 0, 0) } /* red (full intensity of red) */
 ```
 
@@ -72,13 +72,13 @@ The three arguments passed to the rgb function are, as you have probably guessed
 
 As we know from our torch example to produce yellow additively we need to add red and green together, so this is how we would specify pure yellow:
 
-```
+```css
 p { color: rgb(255, 255, 0) } /* yellow (full intensities for red and green, none for blue) */
 ```
 
 Of course this example considers colors at their fullest intensities. A huge range of different yellows could be achieved by combining all three channels in different ways. Here are some additional examples:
 
-```
+```css
 p { color: rgb(255, 0, 255) } /* magenta (full intensities of red and blue)*/
 p { color: rgb(0, 255, 255) } /* cyan (full intensities of green and blue)*/
 p { color: rgb(255, 255, 255) } /* white (all channels at full intensity) */
@@ -87,7 +87,7 @@ p { color: rgb(0, 0, 0) } /* black (all channels at 0 intensity) */
 
 Css also offers us an additional syntax for inputting RGB values, which may help some to easier visualise the resulting color from its parameters:
 
-```
+```css
 p { color: rgb(100%, 0%, 0%) } /* red */
 ```
 
@@ -95,7 +95,7 @@ Rather than an integer range of 0-255 this syntax uses a float range of 0.0% to 
 
 Additionally we have the ability to add an alpha channel to our RGB values. This might seem to complicate things somewhat, after all we know that an image is comprised of only three channels, however it's really not that bad, and is purely a syntactical change. An alpha channel is our way of telling the system to render the given RGB value at a particular level of transparency. To display pure red at 50% transparency we would specify as follows:
 
-```
+```css
 p { color: rgba(255, 0, 0, 0.5) } /* 50% transparent red */
 ```
 The fourth argument is a float range from 0.0 to 1.0, and directly controls the opacity of the color. An opacity of 0 will render the color fully transparent, while an opacity of 1 will render it fully opaque. In this example the opacity is set to 50%. However the resulting color will still simply be a three channel RGB color, just like a regular RGB value. When opacity is used however the system needs to do some additional calculations for us. The three channel RGB color will first be calculated on its own, then the system will consider any other color that exists at that same pixel space on screen, and then perform the required calculations to blend the two colors together, using each colors' opacity value (as well as the HTML element's z-index) to know which levels of each of those two RGB colors to add together. The resulting color makes it appear that the red color is shown at 50% opacity above another color, but in reality what is produced is a new RGB color that simply produces that illusion.
@@ -104,7 +104,7 @@ The fourth argument is a float range from 0.0 to 1.0, and directly controls the 
 
 Keywords are a set of standardised color names that all compliant browsers will understand. Each browser knows specifically which RGB values should represent any given name, so when a keyword color is specified in css, the browser will replace that keyword for us with the RGB value that it represents.
 
-```
+```css
 p { color: red } /* rgb(255, 0, 0) */
 p { color: purple } /* rgb(128, 0, 128) */
 p { color: maroon } /* rgb(128, 0, 0) */
@@ -120,7 +120,7 @@ The word hexadecimal literally means 16, because hexa means 6 and decimal as we'
 
 Now that we understand what all of the symbols mean, let's take a look at how we use hexadecimal notation to represent a color in css:
 
-```
+```css
 p { color: #FF0000 } /* red */
 ```
 
@@ -136,7 +136,7 @@ Now back to the hexadecimal system. In our example the red channel has a value o
 
 To make sure we understand hexadecimal notation let's look at a few more examples:
 
-```
+```css
 p { color: #FFFF00 } /* yellow (full intensities of red and green, none for blue) */
 p { color: #FFFFFF } /* white (all channels at full intensity) */
 p { color: #000000 } /* black (all channels at 0 intensity) */
@@ -148,7 +148,7 @@ So what about those examples of hexadecimal notation that use 3 digits rather th
 
 The final color format that we're going to look at is HSL, or Hue, Saturation and Lightness values. When working with graphics editing software I've always preferred to use HSL values to select my colors, because in my opinion it's the easiest to grasp as a human, due to the fact that it closely mimics how we consider color in our day to day lives. Let's take a look at an example of an HSL value in css:
 
-```
+```css
 p { color: hsl(0, 100, 50) } /* red */
 ```
 
@@ -156,7 +156,7 @@ Have you ever seen a color wheel before? I'm assuming you have, it's an often us
 
 We have one other option when dealing with HSL values, and that is to add an alpha channel, just as we could with RGB values. This looks like:
 
-```
+```css
 p { color: hsla(0, 100, 50, 0.5) } /* 50% transparent red */
 ```
 

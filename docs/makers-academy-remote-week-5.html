@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="../node_modules/highlight.js/scss/arta.scss">
 
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -33,17 +34,17 @@
 <p>After several weeks of using almost nothing but the Ruby programming language (especially when considering the four week long pre-course), this week the focus has been on using another language called JavaScript instead.</p>
 <p>Some of the cohort seemed wary of working with a completely new language after becoming comfortable with Ruby, perhaps assuming that there would be little similarity between the two. I've worked (at a basic level) with a few different languages in the past so I was already aware that many of the primary conventions would be broadly shared, but I think this came as a relief to many of the cohort to discover. Both Ruby and JavaScript are designed around some very similar features, as are many other languages. When studying JavaScript code from our Rubyist point of view it's often easy to see exactly what's happening, simply by drawing from our Ruby experience. The most apparent differences between the two languages at this stage are syntactical ones. I can now see clearly why Makers Academy introduces its students to Ruby first, it's just much more of a forgiving language than JavaScript. Let's compare a very simple example of a Ruby method within a class, and it's JavaScript function within a function counterpart (based upon my early experiences with JavaScript).</p>
 <p>Ruby:</p>
-<pre><code>class MyClass
-  def my_method
-    puts "Hello World"
-  end
-end
+<pre><code class="hljs rb language-rb"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">my_method</span></span>
+    puts <span class="hljs-string">"Hello World"</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 </code></pre>
 <p>JavaScript:</p>
-<pre><code>var myClass = {};
+<pre><code class="hljs js language-js"><span class="hljs-keyword">var</span> myClass = {};
 
-myClass.prototype.myFunction = function sayHello() {
-  console.log("Hello World")
+myClass.prototype.myFunction = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hello World"</span>)
 };
 </code></pre>
 <p>It's trivial to see what's happening in either example, but the above illustrates how JavaScript is much more concerned with syntax, and insists upon several sets of parentheses, curly braces and semi-colons. Carelessly omitting a single semi-colon can bring the entire program crashing down, often with little indication of what went wrong. Conversely Ruby seems to parse its code with the compassionate understanding of a human, willing to work around syntactical (grammatical) discrepancies so long as the intent is clear.</p>

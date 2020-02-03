@@ -14,7 +14,7 @@ After several weeks of using almost nothing but the Ruby programming language (e
 Some of the cohort seemed wary of working with a completely new language after becoming comfortable with Ruby, perhaps assuming that there would be little similarity between the two. I've worked (at a basic level) with a few different languages in the past so I was already aware that many of the primary conventions would be broadly shared, but I think this came as a relief to many of the cohort to discover. Both Ruby and JavaScript are designed around some very similar features, as are many other languages. When studying JavaScript code from our Rubyist point of view it's often easy to see exactly what's happening, simply by drawing from our Ruby experience. The most apparent differences between the two languages at this stage are syntactical ones. I can now see clearly why Makers Academy introduces its students to Ruby first, it's just much more of a forgiving language than JavaScript. Let's compare a very simple example of a Ruby method within a class, and it's JavaScript function within a function counterpart (based upon my early experiences with JavaScript).
 
 Ruby:
-```
+```rb
 class MyClass
   def my_method
     puts "Hello World"
@@ -23,7 +23,7 @@ end
 ```
 
 JavaScript:
-```
+```js
 var myClass = {};
 
 myClass.prototype.myFunction = function sayHello() {

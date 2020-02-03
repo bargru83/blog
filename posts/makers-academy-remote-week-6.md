@@ -15,21 +15,21 @@ The groups were randomly assigned, and each comprised either four or five studen
 
 Once we were all familiar with what constitutes an Airbnb clone, the next step was to construct user stories for each feature that the project would require. User stories are really useful, and I now find myself surprised that I haven't mentioned them in a previous post, because we've actually been using them since week 1. The idea behind user stories is to a construct a short description of each feature that the project will require, from a particular type of user's perspective, following the format shown below.
 
-```
+```json
 As a <type of user>,
 so that <some reason>,
 I want <some goal>.
 ```
 
 Such as:
-```
+```json
 As a potential renter,
 So that I can discuss my booking with the host,
 I'd like to be able to contact the host once my booking has been confirmed.
 ```
 
 or:
-```
+```json
 As a host,
 So that I can manage my space's availability,
 I'd like to be able to pick the space's available dates from a calendar.
@@ -45,7 +45,7 @@ Once the GitHub issues and waffle board were established, it was up to us as a g
 
 The project was to be built using Ruby and Sinatra, and because it was a technology stack that we were already familiar with we didn't face too many troubles getting started. Something that we all seemed to feel a little uncomfortable with however was databases, because we haven't had a great deal of experience using them, and this week required us to use them in some complicated ways. The tricky thing with databases (for me at least) is in planning relationships between each model (type of item). For instance the main models in our implementation were a USER, a SPACE (meaning a property to rent) and a BOOKING, which was an abstract construct that we built to hold the details of a given booking. When defining relationships between models we have to specify which belongs to which, and how many of something another thing can have. That's a confusing statement, so here's an example:
 
-```
+```json
 A USER (a host) has many SPACES (meaning that they can own several spaces).
 A SPACE belongs to one USER (because a space can only belong to one particular host).
 A USER (a renter) has many BOOKINGS (a user can make several bookings if they wish too).
@@ -54,7 +54,7 @@ A BOOKING belongs to one USER (the person who wishes to rent the space).
 
 So far that's not too bad, but considering that a user can be a potential renter or a host…
 
-```
+```json
 A USER (a renter) also has many spaces, because the space also has to be tied to the user who wishes to rent it. We need a way to differentiate spaces that a user owns with spaces that they wish to rent.
 A SPACE has many users when we consider the users who wish to rent it as well as its host. Our space now belongs to one USER (the host), but can have many other USERS renters).
 A USER has many bookings, both as a renter and as a host.

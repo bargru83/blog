@@ -1,4 +1,5 @@
 const showdown = require('showdown');
+const showdownHighlight = require('showdown-highlight');
 const moment = require('moment');
 const fs = require('fs');
 const {
@@ -8,7 +9,7 @@ const {
   deleteFolderRecursive
 } = require('./lib/utils');
 
-const converter = new showdown.Converter({ strikethrough: true });
+const converter = new showdown.Converter({ strikethrough: true, extensions: [showdownHighlight] });
 
 // set global vars
 const postIndex = [];

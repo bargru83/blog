@@ -40,7 +40,7 @@ I find the “Changes I Plan to Make Next Week:” part the most difficult to an
 
 Looking back over the past week, while I still feel like a complete beginner it's clear that I've already learned a huge amount. I can already navigate my Mac pretty well using only the command line, and surprisingly that doesn't only mean the basics of navigation. I can perform advanced tasks like searching for all environment variables that begin with the letter ‘T' (for example), counting them and outputting the result to a new file, using command substitution to place the result in to the middle of a text string. For reference it looks like the below, which would have been a foreign language to me only a week ago:
 
-```
+```bash
 echo "Overall count: $(env | grep ^T | wc -l)" > file.txt
 ```
 

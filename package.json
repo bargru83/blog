@@ -14,6 +14,7 @@
   "dependencies": {
     "eslint": "^4.17.0",
     "moment": "^2.20.1",
-    "showdown": "^1.9.1"
+    "showdown": "^1.9.1",
+    "showdown-highlight": "^2.1.3"
   }
 }

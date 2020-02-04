@@ -166,7 +166,12 @@ code {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 0.8rem;
+}
+
+p code {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 h1 {
@@ -179,6 +184,9 @@ h1 {
 h2 {
   /* font-size: 2rem;
   line-height: 1.25rem; */
+  font-weight: 400;
+  color: #1ba2fc;
+  padding-bottom: 1rem;
 }
 
 .aside {
@@ -258,6 +266,40 @@ ion-icon:hover {
 
 .post-content h1 {
   padding-top: 2rem;
+}
+
+@media only screen and (min-width: 560px) {
+  #left {
+    width: 64%;
+    display: inline-block;
+    vertical-align: text-top;
+    padding-right: 0.5rem;
+    ;
+  }
+
+  #right {
+    width: 32%;
+    display: inline-block;
+    vertical-align: text-top;
+    padding-left: 0.5rem;
+  }
+}
+
+.bold {
+  font-weight: 400;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.cv-page-date {
+  color: slategrey;
+  font-size: 0.9rem;
+}
+
+.cv-block {
+  padding-bottom: 1rem;
 }
 
 /* highlight js */

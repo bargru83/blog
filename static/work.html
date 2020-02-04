@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Barry Grubb: Work</title>
+    <title>Barry Grubb</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -20,18 +20,48 @@
 <body>
     <div class="page-container">
         <div class="top-menu">
-            <a href="./index.html" class="top-menu-entry">Blog</a>
-            <a href="./about.html" class="top-menu-entry">About</a>
+            <a href="./index.html" class="top-menu-entry">About</a>
+            <a href="./blog.html" class="top-menu-entry">Blog</a>
             <a href="./cv.html" class="top-menu-entry">CV/Resume</a>
-            <a href="./work.html" class="top-menu-entry-active">Work</a>
-            <a href="./contact.html" class="top-menu-entry">Contact</a>
+            <a href="./work.html" class="top-menu-entry-active">Things I've made</a>
         </div>
-        <h1 class="about-page-title">Barry Grubb: Work</h1>
+        <h1 class="about-page-title">Things I've made</h1>
         <div class="post-content">
-            <p>Coming soon.</p>
+            
+            <section class="thing-container">
+                <h2>Tons of Todos <span class="thing-type-personal">Personal</span></h2>
+                <p class="thing-date"> 2019 - PRESENT</p>
+                <p>Whenever I want to learn a new technology/technique/thing, I use it to build a todo list app as a case study.</p>
+                <p>The humble todo list has become a bit of a joke or cliché in the dev community today, but by building the same simple functionality each time, I don't need to think too much about the form or functionality, so I'm freed up to focus on the specific technology/technique/thing that I'm trying to learn.</p>
+
+                <p><a href="tons-of-todos.html" class="link">🔗 Check out the Todos.</a></p>
+
+            </section>
+
+            <section class="thing-container">
+                <h2>Static site generator <span class="thing-type-personal">Personal</span></h2>
+                <p class="thing-date"> 2018 - PRESENT</p>
+                <p>When I needed to start this website/blog I figured it would be a fun opportunity to build my own static site generator to power it. I write my posts in markdown, and run a build script which uses Showdownjs to convert that markdown to HTML. The final output is just a collection of HTML, CSS, and JS files, which can then be hosted very simply. This site is hosted for free on GitHub Pages</p>
+                <p>IN its current state the generator and the site content are intrinsically linked within the same repo, but maybe in the future I'll look into separating them out, so that the generator will work with other sites too. The code is pretty content-agnostic already, so it probably wouldn't be much work to do that.</p>
+                
+                <p><a href="how-this-blog-is-built.html" class="link">📖 Read a detailed blog post about how this site (and therefore the generator) works.</a></p>
+
+                <p><a href="https://github.com/bgrubb83/blog" class="link">📁 Check out the code.</a></p>
+            </section>
+
+            <section class="thing-container">
+                <h2>Circular Wave Ltd <span class="thing-type-professional">Professional</span></h2>
+                <p class="thing-date"> 2016 - 2020</p>
+                <p>I spent almost 4 years working with this healthcare tech startup, both in a technical and non-technical capacity.</p>
+                <p>I initially spent some time updating and maintaining a pre-existing MVP app built with Ionic/Angular JS, with a Node.js Monolith backend. Later we completely rebuilt the same product using React and React Native, while also splitting our Node.js monolith back end into several microservices.</p>
+                <p>Working with Circular Wave taught me a huge amount about a lot of things. I was involved in almost every aspect of the business in one way or another, including writing code, planning features and implementations, designing user interfaces, illustration, team leadership, becoming a Professional Scrum Master I (PSM I), overseeing a transition to using Agile methodologies, interviewing, hiring, and firing.</p>
+                <p>Working closely with a small startup, I rode the highs and lows of the business alongside its founders. I'm convinced that my 4 years of experience working with Circular Wave were worth several more years of experience at a more established company.</p>
+                <p>⚠️ In order to protect the business interests of Circular Wave Ltd I'm not permitted to share any code examples or screenshots of the work that I carried out for them.</p>
+            </section>
+
         </div>
-        <div class="footer">&#x24B8; Barry Grubb</div>
     </div>
+    <div class="footer">Made with ❤️, ☕, and a 💻 by Barry Grubb.</div>
 </body>
 
 </html>

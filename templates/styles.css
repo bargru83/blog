@@ -88,24 +88,24 @@ strong {
 
 .index-page-post-title, .tag-page-post-title {
   /* color: #000000; */
-  text-decoration: underline;
+  text-decoration: none;
   color: #1ba2fc;
 }
 
 .index-page-post-title:hover, .tag-page-post-title:hover {
   /* color: #1ba2fc; */
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .index-page-post-tag, .in-post-tag {
   color: slategrey;
   padding-right: 0.5rem;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 0.9rem;
 }
 
 .index-page-post-tag:hover, .in-post-tag:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .index-page-post-container {
@@ -144,13 +144,25 @@ strong {
   font-weight: 400;
 }
 
+ion-icon {
+  font-size: 1.5rem;
+  color: slategrey;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+ion-icon:hover {
+  color: #1ba2fc;
+}
+
 .link {
   color: #1ba2fc;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .link:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #1ba2fc;
 }
 
 pre {
@@ -170,8 +182,8 @@ code {
 }
 
 p code {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
 h1 {
@@ -253,17 +265,6 @@ em {
   padding-bottom: 1rem;
 }
 
-ion-icon {
-  font-size: 1.5rem;
-  color: slategrey;
-  cursor: pointer;
-  padding-right: 0.5rem;
-}
-
-ion-icon:hover {
-  color: #1ba2fc;
-}
-
 .post-content h1 {
   padding-top: 2rem;
 }
@@ -300,6 +301,47 @@ ion-icon:hover {
 
 .cv-block {
   padding-bottom: 1rem;
+}
+
+.thing-container {
+  /* outline-width: 1px; */
+  /* outline-style: solid; */
+  /* outline-color: #1ba2fc; */
+  border-bottom-width: 1px;
+  border-color: #1ba2fc;
+  border-style: solid;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.thing-container:nth-last-child(1) {
+  border-bottom: 0;
+  margin-bottom: 0rem;
+}
+
+.thing-type-professional {
+  color: white;
+  background-color: #1ba2fc;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.thing-type-personal {
+  color:  #1ba2fc;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #1ba2fc;
+  font-size: 0.9rem;
+}
+
+.thing-date {
+  color: slategrey;
+  font-size: 1rem;
 }
 
 /* highlight js */

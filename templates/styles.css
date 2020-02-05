@@ -51,7 +51,6 @@ table {
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  /* padding: 1rem; */
 }
 
 p {
@@ -61,7 +60,6 @@ p {
 ul, ol {
   list-style-type: square;
   padding-left: 2rem;
-  /* padding: 2rem; */
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -71,7 +69,6 @@ strong {
 }
 
 .page-container {
-  /* width: 100%; */
   min-height: calc(100vh - 4rem);
   margin-top: 1rem;
   max-width: 700px;
@@ -83,17 +80,14 @@ strong {
   color: #222222;
   padding-left: 1rem;
   padding-right: 1rem;
-  /* color: #000000; */
 }
 
 .index-page-post-title, .tag-page-post-title {
-  /* color: #000000; */
   text-decoration: none;
   color: #1ba2fc;
 }
 
 .index-page-post-title:hover, .tag-page-post-title:hover {
-  /* color: #1ba2fc; */
   text-decoration: underline;
 }
 
@@ -113,9 +107,6 @@ strong {
 }
 
 .index-page-post-date, .in-post-date, .tag-page-post-date {
-  /* font-style: italic;
-  margin: 0;
-  padding: 0; */
   color: slategrey;
   font-size: 0.9rem;
 }
@@ -125,7 +116,6 @@ strong {
 }
 
 .top-menu-entry {
-  /* font-size: 1rem; */
   color: slategrey;
   text-decoration: none;
   padding-right: 1rem;
@@ -137,7 +127,6 @@ strong {
 }
 
 .top-menu-entry-active {
-  /* font-size: 1rem; */
   color: #1ba2fc;
   text-decoration: none;
   padding-right: 1rem;
@@ -194,8 +183,6 @@ h1 {
 }
 
 h2 {
-  /* font-size: 2rem;
-  line-height: 1.25rem; */
   font-weight: 400;
   color: #1ba2fc;
   padding-bottom: 1rem;
@@ -204,14 +191,10 @@ h2 {
 .aside {
   background-color: #1ba2fc;
   padding: 1rem;
-  /* font-style: italic;
-  margin-bottom: 0;
-  padding: 1rem; */
 }
 
 .aside h2 {
   font-weight: 400;
-  /* line-height: 1.5rem; */
 }
 
 .post-content img, .responsive-img {
@@ -228,8 +211,6 @@ h2 {
 .profile-img {
   max-width: 150px;
   max-height: 150px;
-  /* padding-top: 2rem; */
-  /* padding-bottom: 2rem; */
   margin-bottom: 2rem;
   border-radius: 50%;
 }
@@ -253,11 +234,6 @@ h2 {
   color: #222222;
   padding-bottom: 1rem;
   padding-top: 1rem;
-  /* padding-top: 32px; */
-}
-
-em {
-  /* font-style: italic; */
 }
 
 #social-container {
@@ -304,9 +280,6 @@ em {
 }
 
 .thing-container {
-  /* outline-width: 1px; */
-  /* outline-style: solid; */
-  /* outline-color: #1ba2fc; */
   border-bottom-width: 1px;
   border-color: #1ba2fc;
   border-style: solid;

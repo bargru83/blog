@@ -271,15 +271,6 @@ h2 {
   font-style: italic;
 }
 
-.cv-page-date {
-  color: slategrey;
-  font-size: 0.9rem;
-}
-
-.cv-block {
-  padding-bottom: 1rem;
-}
-
 .thing-container {
   border-bottom-width: 1px;
   border-color: #1ba2fc;

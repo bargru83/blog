@@ -2,7 +2,7 @@
   "title": "Positive and negative behaviors and the chain system",
   "date": "2016-06-23",
   "tags": "['personal development']",
-  "draft": "false"
+  "draft": "true"
 }
 ---ENDFRONTMATTER---
 ![Positive and negative behaviors and the chain system](media/positive-and-negative-behaviours-and-the-chain-system.png "Positive and negative behaviors and the chain system")

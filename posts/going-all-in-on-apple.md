@@ -2,7 +2,7 @@
   "title": "Going all in on Apple",
   "date": "2018-04-05",
   "tags": "['privacy']",
-  "draft": "false"
+  "draft": "true"
 }
 ---ENDFRONTMATTER---
 At this moment in time, we're seeing rapidly increasing adoption of the #deleteFacebook and #deleteGoogle movements. It's not the first time and it won't be the last that privacy issues have caused people to sit up and wonder whether it's really such a great idea to direct a fire hose of our own private data toward these huge corporate funnels, who wish only to use that data for their own financial benefit.

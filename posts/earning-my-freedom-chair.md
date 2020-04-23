@@ -2,7 +2,7 @@
   "title": "Earning my freedom (chair)",
   "date": "2018-04-07",
   "tags": "['random', 'personal development']",
-  "draft": "false"
+  "draft": "true"
 }
 ---ENDFRONTMATTER---
 Ten years ago I needed to buy a new office chair. I had plenty of free time back then and soon fell into full geek mode in search of all the viable options. I pored over websites and brochures and immersed myself in a world that I'd previously known almost nothing about. After weeks of consideration I cut my short list down to two models: the Herman Miller Aeron chair and the Humanscale Freedom chair. Both of these are considered some of the finest office chairs ever built, and depending upon how you spec them out (the level of customisation when ordering a new one rivals the experience of buying a brand new car) you can expect to pay around £1000.

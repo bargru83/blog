@@ -154,6 +154,11 @@ ion-icon:hover {
   color: #1ba2fc;
 }
 
+.link:visited {
+  color: #1ba2fc;
+  text-decoration: none;
+}
+
 pre {
   padding-top: 2rem;
   padding-bottom: 2rem;
